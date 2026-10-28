@@ -1,0 +1,2609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML5 Notes for Professionals — A Storybook of the Web's Language</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="https://pph.name.ng/pphlogo.svg">
+</head>
+<body>
+
+<!-- ============================================================
+     FRONT COVER
+     ============================================================ -->
+<section id="cover" class="book-page cover-page">
+  <div class="cover-content">
+    <p class="cover-series">100+ Pages of Professional Hints and Tricks</p>
+    <h1 class="cover-title">HTML5 Notes for Professionals</h1>
+    <p class="cover-subtitle">From your first doctype to ARIA roles, forms, media, and semantic structure — the language of the web, distilled into one storybook.</p>
+    <p class="cover-author">Compiled from Stack Overflow Documentation by the beautiful people at Stack Overflow</p>
+    <p class="cover-note">Seven parts. Forty-one chapters.<br>One language that built the web.</p>
+    <p class="cover-credit">
+      Refactored &amp; illustrated by<br>
+      <a href="https://agunechemba.name.ng" target="_blank" rel="noopener">Agunechemba Ekene</a>
+    </p>
+  </div>
+  <div class="book-nav">
+    <button class="nav-button" data-nav="next">Begin the Journey →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     TABLE OF CONTENTS
+     ============================================================ -->
+<section id="toc" class="book-page toc-page">
+  <div class="chapter-header">
+    <h2>Table of Contents</h2>
+    <p class="chapter-tagline">Forty-one chapters, seven parts — where would you like to begin?</p>
+  </div>
+
+  <div class="toc-part">
+    <h3>Part One: Foundations</h3>
+    <ol>
+      <li><a href="#ch-getting-started-with-html">Getting started with HTML</a></li>
+      <li><a href="#ch-doctypes">DocTypes</a></li>
+      <li><a href="#ch-headings">Headings</a></li>
+      <li><a href="#ch-paragraphs">Paragraphs</a></li>
+      <li><a href="#ch-text-formatting">Text Formatting</a></li>
+      <li><a href="#ch-anchors-and-hyperlinks">Anchors and Hyperlinks</a></li>
+    </ol>
+  </div>
+
+  <div class="toc-part">
+    <h3>Part Two: Content and Identity</h3>
+    <ol start="7">
+      <li><a href="#ch-lists">Lists</a></li>
+      <li><a href="#ch-tables">Tables</a></li>
+      <li><a href="#ch-comments">Comments</a></li>
+      <li><a href="#ch-classes-and-ids">Classes and IDs</a></li>
+      <li><a href="#ch-data-attributes">Data Attributes</a></li>
+      <li><a href="#ch-linking-resources">Linking Resources</a></li>
+    </ol>
+  </div>
+
+  <div class="toc-part">
+    <h3>Part Three: Media and Forms</h3>
+    <ol start="13">
+      <li><a href="#ch-include-javascript">Include JavaScript Code in HTML</a></li>
+      <li><a href="#ch-using-html-with-css">Using HTML with CSS</a></li>
+      <li><a href="#ch-images">Images</a></li>
+      <li><a href="#ch-image-maps">Image Maps</a></li>
+      <li><a href="#ch-input-control-elements">Input Control Elements</a></li>
+      <li><a href="#ch-forms">Forms</a></li>
+    </ol>
+  </div>
+
+  <div class="toc-part">
+    <h3>Part Four: Semantics and Structure</h3>
+    <ol start="19">
+      <li><a href="#ch-div-element">Div Element</a></li>
+      <li><a href="#ch-sectioning-elements">Sectioning Elements</a></li>
+      <li><a href="#ch-navigation-bars">Navigation Bars</a></li>
+      <li><a href="#ch-label-element">Label Element</a></li>
+      <li><a href="#ch-output-element">Output Element</a></li>
+      <li><a href="#ch-void-elements">Void Elements</a></li>
+    </ol>
+  </div>
+
+  <div class="toc-part">
+    <h3>Part Five: Embedded Media</h3>
+    <ol start="25">
+      <li><a href="#ch-media-elements">Media Elements</a></li>
+      <li><a href="#ch-progress-element">Progress Element</a></li>
+      <li><a href="#ch-selection-menu-controls">Selection Menu Controls</a></li>
+      <li><a href="#ch-embed">Embed</a></li>
+      <li><a href="#ch-iframes">IFrames</a></li>
+      <li><a href="#ch-content-languages">Content Languages</a></li>
+    </ol>
+  </div>
+
+  <div class="toc-part">
+    <h3>Part Six: Graphics and Metadata</h3>
+    <ol start="31">
+      <li><a href="#ch-svg">SVG</a></li>
+      <li><a href="#ch-canvas">Canvas</a></li>
+      <li><a href="#ch-meta-information">Meta Information</a></li>
+      <li><a href="#ch-marking-up-computer-code">Marking up computer code</a></li>
+      <li><a href="#ch-marking-up-quotes">Marking-up Quotes</a></li>
+    </ol>
+  </div>
+
+  <div class="toc-part">
+    <h3>Part Seven: Accessibility and Legacy</h3>
+    <ol start="36">
+      <li><a href="#ch-tabindex">Tabindex</a></li>
+      <li><a href="#ch-global-attributes">Global Attributes</a></li>
+      <li><a href="#ch-html5-cache">HTML 5 Cache</a></li>
+      <li><a href="#ch-html-event-attributes">HTML Event Attributes</a></li>
+      <li><a href="#ch-character-entities">Character Entities</a></li>
+      <li><a href="#ch-aria">ARIA</a></li>
+    </ol>
+  </div>
+
+  <div class="toc-part">
+    <h3>Appendix</h3>
+    <ol>
+      <li><a href="#glossary">Glossary of Useful Terms</a></li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Cover</button>
+    <button class="nav-button" data-nav="next">Introduction →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     INTRODUCTION
+     ============================================================ -->
+<section id="intro" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Introduction</p>
+    <h2>Why HTML Still Matters</h2>
+    <p class="chapter-tagline">The language of the web — small, semantic, and everywhere</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>HTML — Hypertext Markup Language — is the language in which the web is written. It is not a programming language; it has no logic, no loops, no conditions. It is a markup language: a way of describing what content <em>is</em>, so that browsers, search engines, screen readers, and other tools can make sense of it.</p>
+    <p>This book is compiled from Stack Overflow Documentation — the collective knowledge of thousands of web developers who have wrestled with HTML and written down what they learned. It is not a tutorial. It is a reference, a set of professional notes for people who already build for the web and want to build it better.</p>
+    <p>The book has seven parts. <strong>Part One</strong> covers the foundations: getting started, doctypes, headings, paragraphs, text formatting, and anchors. <strong>Part Two</strong> moves through lists, tables, comments, classes, data attributes, and linking external resources. <strong>Part Three</strong> covers JavaScript inclusion, CSS, images, image maps, input controls, and forms. <strong>Part Four</strong> is about structure: divs, sectioning elements, navigation, labels, output elements, and void elements. <strong>Part Five</strong> handles embedded content: media, progress bars, selection menus, embeds, iframes, and content languages. <strong>Part Six</strong> covers SVG, canvas, metadata, and marking up code and quotes. <strong>Part Seven</strong> closes with tabindex, global attributes, the HTML5 cache, event attributes, character entities, and ARIA.</p>
+    <p>HTML is deceptively simple: a handful of tags, a few attributes, and you are done. But the deeper you go, the more you realise how much of accessibility, performance, and maintainability depends on getting the semantics right. This book is about getting the semantics right.</p>
+    <p>Every chapter follows the same shape: a short story drawn from the source, a representative code example, a box of <em>Key Ideas</em>, and three <em>Try It Yourself</em> exercises. Wherever you start, welcome.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>HTML is a markup language — it describes content, not behaviour.</li>
+      <li>The book is compiled from Stack Overflow documentation — a professional reference, not a tutorial.</li>
+      <li>Seven parts: foundations, content, media and forms, structure, embedded content, graphics and metadata, accessibility.</li>
+      <li>Semantics matter — for accessibility, SEO, and maintainability.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Open a website you admire and view its source. Count the elements you recognise.</li>
+      <li>Which part of the book are you most curious about? Start there.</li>
+      <li>What does "semantic HTML" mean to you, before you have read the book?</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Table of Contents</button>
+    <button class="nav-button" data-nav="next">Part One →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     PART ONE DIVIDER
+     ============================================================ -->
+<section id="part-one" class="book-page cover-page part-page part-one">
+  <div class="cover-content">
+    <p class="part-number">Part One</p>
+    <h1>Foundations</h1>
+    <p class="part-desc">Getting started, doctypes, headings, paragraphs, text formatting, and anchors — the elements every HTML page is built from.</p>
+  </div>
+  <div class="book-nav">
+    <button class="nav-button" data-nav="next">Begin Chapter 1 →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 1 — GETTING STARTED WITH HTML
+     ============================================================ -->
+<section id="ch-getting-started-with-html" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Part One · Foundations · Chapter 1</p>
+    <h2>Getting started with HTML</h2>
+    <p class="chapter-tagline">Markup, not programming — the language of the web</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>HTML — Hypertext Markup Language — uses a markup system composed of elements that represent specific content. Markup declares <em>what</em> is presented, not <em>how</em>; visual styling is the job of CSS. HTML is sometimes called a programming language, but it has no logic — it is a markup language whose tags give semantic meaning and machine-readability to content.</p>
+    <p>An element usually consists of an opening tag <code>&lt;element_name&gt;</code>, a closing tag <code>&lt;/element_name&gt;</code>, and the content between them. Void elements — <code>&lt;img&gt;</code>, <code>&lt;meta&gt;</code>, <code>&lt;link&gt;</code>, <code>&lt;input&gt;</code> — have no closing tag and no content. Element names are descriptive keywords: <code>video</code>, <code>audio</code>, <code>table</code>, <code>footer</code>.</p>
+    <p>A page may contain hundreds of elements which a browser reads, interprets, and renders into human-readable or audible content. HTML files can be written in any text editor and must be saved with a <code>.html</code> or <code>.htm</code> extension.</p>
+    <pre class="code-example"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Hello!&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello World!&lt;/h1&gt;
+    &lt;p&gt;This is a simple paragraph.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    <p>Break the example down: <code>&lt;!DOCTYPE html&gt;</code> defines the HTML version; <code>&lt;html lang="en"&gt;</code> opens the page and declares its language; <code>&lt;head&gt;</code> holds metadata that never appears in the browser window; <code>&lt;meta charset="UTF-8"&gt;</code> declares the character encoding; <code>&lt;title&gt;</code> sets the tab or window title; and <code>&lt;body&gt;</code> contains all visible or audible content.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>HTML is a markup language, not a programming language — it has no logic.</li>
+      <li>Elements have an opening tag, content, and a closing tag — except void elements.</li>
+      <li><code>&lt;!DOCTYPE html&gt;</code> must be the very first line.</li>
+      <li><code>&lt;head&gt;</code> holds metadata; <code>&lt;body&gt;</code> holds visible content.</li>
+      <li>Modern pages should declare <code>&lt;meta charset="UTF-8"&gt;</code>.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Create a file called <code>hello.html</code> and open it in a browser.</li>
+      <li>Add a second paragraph and reload the page.</li>
+      <li>Remove the <code>&lt;!DOCTYPE html&gt;</code> line and observe any differences.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Part One</button>
+    <button class="nav-button" data-nav="next">DocTypes →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 2 — DOCTYPES
+     ============================================================ -->
+<section id="ch-doctypes" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Part One · Foundations · Chapter 2</p>
+    <h2>DocTypes</h2>
+    <p class="chapter-tagline">One line at the top that tells the browser what to expect</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Doctypes — short for "document type" — help browsers understand the version of HTML the document is written in for better interpretability. Doctype declarations are not HTML tags and belong at the very top of a document, before the <code>&lt;html&gt;</code> tag.</p>
+    <p>HTML5 is not based on SGML, so it does not require a reference to a DTD. The HTML5 doctype is simply <code>&lt;!DOCTYPE html&gt;</code>. That single line tells the browser to render the page in standards mode rather than quirks mode.</p>
+    <p>The string <code>DOCTYPE</code> is ASCII case-insensitive, so <code>&lt;!doctype html&gt;</code> and <code>&lt;!DOCTYPE HTML&gt;</code> are also valid — but the conventional form is all-uppercase <code>DOCTYPE</code>.</p>
+    <pre class="code-example"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>The doctype goes at the very top of the document, before <code>&lt;html&gt;</code>.</li>
+      <li>HTML5 does not need a DTD reference — one line is enough.</li>
+      <li><code>&lt;!DOCTYPE html&gt;</code> is case-insensitive, but uppercase is conventional.</li>
+      <li>The doctype triggers standards mode in browsers.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Remove the doctype from a page and observe how rendering changes.</li>
+      <li>Try <code>&lt;!doctype html&gt;</code> in lowercase — it still works.</li>
+      <li>Compare your page in standards mode versus quirks mode.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Getting started</button>
+    <button class="nav-button" data-nav="next">Headings →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 3 — HEADINGS
+     ============================================================ -->
+<section id="ch-headings" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Part One · Foundations · Chapter 3</p>
+    <h2>Headings</h2>
+    <p class="chapter-tagline">Six levels of hierarchy — and why getting them right matters</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>HTML provides six separate header tags to indicate headings of various sizes and thicknesses: <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>. <code>&lt;h1&gt;</code> is the largest and most important; <code>&lt;h6&gt;</code> the smallest and least important. Every heading tag supports all global attributes.</p>
+    <p>Search engines and other user agents index page content based on heading elements — for example, to build a table of contents. So using the correct structure matters. In general, an article should have one <code>&lt;h1&gt;</code> for the main title, followed by <code>&lt;h2&gt;</code> subtitles, going down a layer only when necessary.</p>
+    <p>Headings should describe the content they precede — not be used merely to make text large. If you want big text, use CSS. If you want a heading, use a heading tag, because assistive technologies and search engines rely on the structure.</p>
+    <pre class="code-example"><code>&lt;h1&gt;Main title&lt;/h1&gt;
+&lt;p&gt;Introduction&lt;/p&gt;
+
+&lt;h2&gt;Reasons&lt;/h2&gt;
+&lt;h3&gt;Reason 1&lt;/h3&gt;
+&lt;p&gt;Paragraph&lt;/p&gt;
+&lt;h3&gt;Reason 2&lt;/h3&gt;
+&lt;p&gt;Paragraph&lt;/p&gt;
+
+&lt;h2&gt;In conclusion&lt;/h2&gt;
+&lt;p&gt;Paragraph&lt;/p&gt;</code></pre>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Six heading levels, <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>, in decreasing importance.</li>
+      <li>One <code>&lt;h1&gt;</code> per page is the usual convention.</li>
+      <li>Heading structure affects SEO and assistive technology.</li>
+      <li>Do not use headings merely to make text big — use CSS for styling.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Write a document with one h1, two h2s, and a few h3s. View the source in a browser's accessibility inspector.</li>
+      <li>Try removing the h1 and observe how the structure looks to a screen reader.</li>
+      <li>Rewrite a page you have written so that the heading hierarchy is a valid outline.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← DocTypes</button>
+    <button class="nav-button" data-nav="next">Paragraphs →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 4 — PARAGRAPHS
+     ============================================================ -->
+<section id="ch-paragraphs" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Part One · Foundations · Chapter 4</p>
+    <h2>Paragraphs</h2>
+    <p class="chapter-tagline">The most basic HTML element, and how whitespace actually works</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>The <code>&lt;p&gt;</code> element defines a paragraph. The <code>&lt;br&gt;</code> element inserts a single line break, and <code>&lt;pre&gt;</code> defines pre-formatted text where whitespace and newlines are preserved.</p>
+    <p>You cannot be sure how HTML will be displayed. Large or small screens, and resized windows, will create different results. With HTML, you cannot change the output by adding extra spaces or extra lines in your source — the browser collapses any run of whitespace into a single space when rendering.</p>
+    <p>That collapsing behaviour is important: if you want precise whitespace, use <code>&lt;pre&gt;</code> or CSS. If you want a visual line break without starting a new paragraph, use <code>&lt;br&gt;</code> sparingly — it has no semantic meaning and is generally discouraged for layout.</p>
+    <pre class="code-example"><code>&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;p&gt;This is another paragraph.&lt;/p&gt;
+
+&lt;p&gt;First line.&lt;br&gt;
+Second line.&lt;/p&gt;
+
+&lt;pre&gt;This text
+preserves    spacing
+and line breaks.&lt;/pre&gt;</code></pre>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li><code>&lt;p&gt;</code> is the basic paragraph element.</li>
+      <li>Whitespace in the source collapses into a single space when rendered.</li>
+      <li><code>&lt;br&gt;</code> inserts a line break; use it sparingly.</li>
+      <li><code>&lt;pre&gt;</code> preserves whitespace and newlines.</li>
+      <li>Styling is the job of CSS — use elements for structure, not appearance.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Write two paragraphs separated by several blank lines in the source — observe the output.</li>
+      <li>Use <code>&lt;br&gt;</code> to split a single paragraph across three lines.</li>
+      <li>Compare the output of <code>&lt;p&gt;</code> and <code>&lt;pre&gt;</code> with the same text.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Headings</button>
+    <button class="nav-button" data-nav="next">Text Formatting →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 5 — TEXT FORMATTING
+     ============================================================ -->
+<section id="ch-text-formatting" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Part One · Foundations · Chapter 5</p>
+    <h2>Text Formatting</h2>
+    <p class="chapter-tagline">Emphasis, importance, and the semantics behind bold and italic</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>The <code>&lt;mark&gt;</code> element (new in HTML5) highlights text "due to its relevance in another context" — the classic case is search-result highlighting. A common default style is black text on a yellow background, but CSS can change it.</p>
+    <p>For bold text, use <code>&lt;strong&gt;</code> or <code>&lt;b&gt;</code>. The difference is semantic: <code>&lt;strong&gt;</code> conveys importance; <code>&lt;b&gt;</code> simply draws attention without implying importance. A screen reader may speak <code>&lt;strong&gt;</code> text with added emphasis, but not <code>&lt;b&gt;</code> text. For italic, use <code>&lt;em&gt;</code> for stressed emphasis and <code>&lt;i&gt;</code> for stylistic italics (titles, foreign words).</p>
+    <p><code>&lt;u&gt;</code> was deprecated in HTML 4 and reintroduced in HTML 5 with a new meaning: an unarticulated but explicitly rendered annotation, such as a misspelled word or a Chinese proper name mark. <code>&lt;abbr title="..."&gt;</code> marks abbreviations. <code>&lt;ins&gt;</code>, <code>&lt;del&gt;</code>, and <code>&lt;s&gt;</code> mark insertions, deletions, and strikethroughs. <code>&lt;sup&gt;</code> and <code>&lt;sub&gt;</code> raise and lower text.</p>
+    <pre class="code-example"><code>&lt;p&gt;Here is some &lt;mark&gt;highlighted&lt;/mark&gt; text.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Bold&lt;/strong&gt; and &lt;b&gt;also bold&lt;/b&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Stressed italic&lt;/em&gt; and &lt;i&gt;stylistic italic&lt;/i&gt;.&lt;/p&gt;
+&lt;p&gt;I like to write &lt;abbr title="Hypertext Markup Language"&gt;HTML&lt;/abbr&gt;.&lt;/p&gt;
+&lt;p&gt;Water is H&lt;sub&gt;2&lt;/sub&gt;O and E = mc&lt;sup&gt;2&lt;/sup&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;Old price&lt;/del&gt; &lt;ins&gt;New price&lt;/ins&gt;&lt;/p&gt;</code></pre>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li><code>&lt;mark&gt;</code> highlights text by relevance, not just colour.</li>
+      <li><code>&lt;strong&gt;</code> and <code>&lt;em&gt;</code> convey meaning; <code>&lt;b&gt;</code> and <code>&lt;i&gt;</code> are purely stylistic.</li>
+      <li><code>&lt;u&gt;</code> in HTML5 marks non-textual annotations, not links.</li>
+      <li><code>&lt;abbr&gt;</code> with <code>title</code> gives the expansion of abbreviations.</li>
+      <li><code>&lt;ins&gt;</code>, <code>&lt;del&gt;</code>, <code>&lt;s&gt;</code>, <code>&lt;sup&gt;</code>, <code>&lt;sub&gt;</code> cover edit and positional formatting.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Write a paragraph that uses all of the elements above.</li>
+      <li>Open the page in a screen reader and compare <code>&lt;strong&gt;</code> with <code>&lt;b&gt;</code>.</li>
+      <li>Use <code>&lt;abbr&gt;</code> to define three acronyms.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Paragraphs</button>
+    <button class="nav-button" data-nav="next">Anchors →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 6 — ANCHORS AND HYPERLINKS
+     ============================================================ -->
+<section id="ch-anchors-and-hyperlinks" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Part One · Foundations · Chapter 6</p>
+    <h2>Anchors and Hyperlinks</h2>
+    <p class="chapter-tagline">The <code>&lt;a&gt;</code> element — the heart of the web</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Anchor tags are commonly used to link separate webpages, but they can also link between places in a single document — often within a table of contents — or launch external applications such as a phone dialler or an email client. The <code>href</code> attribute is the destination: an absolute URL, a relative URL, an anchor, or a <code>tel:</code>, <code>mailto:</code>, or <code>javascript:</code> URI.</p>
+    <p>The <code>target</code> attribute controls where the link opens. <code>_blank</code> opens a new tab or window — but this creates a security risk, because the new page can reach back into the current page via <code>window.opener</code> and potentially redirect users to a phishing site. When using <code>_blank</code>, add <code>rel="noopener"</code> to prevent this attack.</p>
+    <p>You can link to an anchor within the same page by pointing to an element's <code>id</code> attribute: <code>&lt;a href="#section-id"&gt;</code>. You can also use <code>tel:</code> to dial a number, <code>mailto:</code> to open an email client (with optional <code>cc</code>, <code>bcc</code>, <code>subject</code>, and <code>body</code> parameters — all URL-encoded), and <code>javascript:</code> to run code — though the last is strongly discouraged; use a proper event listener and a <code>&lt;button&gt;</code> instead.</p>
+    <pre class="code-example"><code>&lt;a href="http://example.com/"&gt;Link to example.com&lt;/a&gt;
+&lt;a href="http://example.com/" target="_blank" rel="noopener"&gt;Open in new tab&lt;/a&gt;
+&lt;a href="#Topic1"&gt;Jump to the first topic&lt;/a&gt;
+&lt;a href="tel:+15551234567"&gt;Call us&lt;/a&gt;
+&lt;a href="mailto:example@example.com?subject=Hello&amp;body=Hi!"&gt;Send email&lt;/a&gt;</code></pre>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>The <code>href</code> attribute is the destination; it can be absolute, relative, or an anchor.</li>
+      <li><code>target="_blank"</code> opens a new tab — always add <code>rel="noopener"</code>.</li>
+      <li><code>tel:</code> dials a number; <code>mailto:</code> opens the email client.</li>
+      <li>Anchor links (<code>#id</code>) jump to elements by their <code>id</code>.</li>
+      <li>Prefer proper event listeners and <code>&lt;button&gt;</code> over <code>javascript:</code> links.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Create a table of contents with anchor links to three sections.</li>
+      <li>Write an email link with a pre-filled subject and body.</li>
+      <li>Try a <code>tel:</code> link on a desktop and a mobile device.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Text Formatting</button>
+    <button class="nav-button" data-nav="next">Part Two →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     PART TWO DIVIDER
+     ============================================================ -->
+<section id="part-two" class="book-page cover-page part-page part-two">
+  <div class="cover-content">
+    <p class="part-number">Part Two</p>
+    <h1>Content and Identity</h1>
+    <p class="part-desc">Lists, tables, comments, classes, data attributes, and linking external resources — how HTML shapes and connects content.</p>
+  </div>
+  <div class="book-nav">
+    <button class="nav-button" data-nav="next">Begin Chapter 7 →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 7 — LISTS
+     ============================================================ -->
+<section id="ch-lists" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Two · Content and Identity · Chapter 7</p>
+    <h2>Lists</h2>
+    <p class="chapter-tagline">Three kinds of lists — ordered, unordered, and description</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>HTML offers three ways to specify lists. Ordered lists (<code>&lt;ol&gt;</code>) use ordinal sequences; unordered lists (<code>&lt;ul&gt;</code>) use bullets; and description lists (<code>&lt;dl&gt;</code>) use indents to pair names with their values. Every list item inside an ordered or unordered list is a <code>&lt;li&gt;</code>.</p>
+    <p>Ordered lists support <code>start</code>, <code>value</code>, <code>reversed</code>, and <code>type</code> attributes. <code>start</code> sets the first number; <code>value</code> overrides the number of a specific item (and the numbering continues from that value); <code>reversed</code> counts down; <code>type</code> selects decimal, alphabetic, or Roman numerals.</p>
+    <p>Nested lists are supported — a sub-list must be a child of an <code>&lt;li&gt;</code>, not a sibling. Description lists use <code>&lt;dt&gt;</code> for the term and <code>&lt;dd&gt;</code> for the description; a single term may have several descriptions, and a single description may serve several terms.</p>
+    <pre class="code-example"><code>&lt;ol start="3"&gt;
+  &lt;li&gt;Item&lt;/li&gt;
+  &lt;li&gt;Another Item&lt;/li&gt;
+  &lt;li value="7"&gt;A Reset Item&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Item&lt;/li&gt;
+  &lt;li&gt;Another Item
+    &lt;ul&gt;
+      &lt;li&gt;Sub-item&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;dl&gt;
+  &lt;dt&gt;name 1&lt;/dt&gt;
+  &lt;dd&gt;value for 1&lt;/dd&gt;
+  &lt;dt&gt;name 2&lt;/dt&gt;
+  &lt;dd&gt;value for 2&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Use <code>&lt;ol&gt;</code> when order matters, <code>&lt;ul&gt;</code> when it does not.</li>
+      <li><code>start</code>, <code>value</code>, <code>reversed</code>, and <code>type</code> control ordered-list numbering.</li>
+      <li>Nested lists must live inside the parent <code>&lt;li&gt;</code>.</li>
+      <li><code>&lt;dl&gt;</code> pairs terms (<code>&lt;dt&gt;</code>) with descriptions (<code>&lt;dd&gt;</code>).</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Write an ordered list that starts at 5 and includes a <code>value</code> override.</li>
+      <li>Nest an unordered list inside an ordered list.</li>
+      <li>Build a description list of three HTML elements and their purposes.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Part Two</button>
+    <button class="nav-button" data-nav="next">Tables →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 8 — TABLES
+     ============================================================ -->
+<section id="ch-tables" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Two · Content and Identity · Chapter 8</p>
+    <h2>Tables</h2>
+    <p class="chapter-tagline">Rows, columns, headers, and the semantics of tabular data</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>The <code>&lt;table&gt;</code> element displays tabular data — text, images, links, even other tables — in a two-dimensional grid of rows and columns. Rows are <code>&lt;tr&gt;</code>; header cells are <code>&lt;th&gt;</code>; data cells are <code>&lt;td&gt;</code>.</p>
+    <p>Cells can span multiple columns or rows using <code>colspan</code> and <code>rowspan</code>. The defaults are 1; a value of 0 extends the cell to the end of the containing group. You should not design a table where both rows and columns overlap — that is invalid HTML and browsers handle it differently.</p>
+    <p>For semantic and stylistic structure, tables can contain <code>&lt;caption&gt;</code>, <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, and <code>&lt;tfoot&gt;</code>. The <code>&lt;caption&gt;</code> goes first; <code>&lt;thead&gt;</code> and <code>&lt;tfoot&gt;</code> can appear in either order (but <code>&lt;tbody&gt;</code> goes between them logically, regardless of source order). Column groups use <code>&lt;colgroup&gt;</code> and <code>&lt;col&gt;</code>.</p>
+    <p>The <code>scope</code> attribute on <code>&lt;th&gt;</code> tells assistive technology whether a header applies to a column, row, column group, or row group. Use <code>scope="col"</code> and <code>scope="row"</code> generously.</p>
+    <pre class="code-example"><code>&lt;table&gt;
+  &lt;caption&gt;Table Title&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope="col"&gt;Heading 1&lt;/th&gt;
+      &lt;th scope="col"&gt;Heading 2&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Row 1 Cell 1&lt;/td&gt;
+      &lt;td&gt;Row 1 Cell 2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td colspan="2"&gt;A cell spanning two columns&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Use <code>&lt;th&gt;</code> for headers and <code>&lt;td&gt;</code> for data.</li>
+      <li><code>colspan</code> and <code>rowspan</code> span cells across columns and rows.</li>
+      <li><code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, <code>&lt;tfoot&gt;</code>, and <code>&lt;caption&gt;</code> add semantics.</li>
+      <li><code>scope="col"</code> and <code>scope="row"</code> help screen readers.</li>
+      <li>Do not design tables where row and column spans overlap.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Build a 3×3 table with header row and header column, using <code>scope</code>.</li>
+      <li>Merge two cells in one row with <code>colspan</code>.</li>
+      <li>Add a <code>&lt;caption&gt;</code> and a <code>&lt;tfoot&gt;</code> with a totals row.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Lists</button>
+    <button class="nav-button" data-nav="next">Comments →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 9 — COMMENTS
+     ============================================================ -->
+<section id="ch-comments" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Two · Content and Identity · Chapter 9</p>
+    <h2>Comments</h2>
+    <p class="chapter-tagline">Notes to yourself and other developers — invisible to users</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>HTML comments begin with <code>&lt;!--</code> and end with <code>--&gt;</code>. They can be single-line, multi-line, or inline within content — the browser will not render anything inside them. They are commonly used to leave notes to yourself, to document tricky markup, or to "comment out" entire blocks of HTML during development.</p>
+    <p>Comments cannot appear inside another tag. Writing <code>&lt;h1 &lt;!-- x --&gt; attr="..."&gt;</code> produces invalid HTML, because the whole block is treated as a single start tag with junk in it. For compatibility with XML and SGML parsers, the body of a comment should not contain <code>--</code>.</p>
+    <p>A less-obvious use: commenting out the whitespace between inline elements (like <code>&lt;a&gt;</code> or <code>&lt;button&gt;</code>) prevents the extra space that browsers insert between them. This matters for layout precision.</p>
+    <pre class="code-example"><code>&lt;!-- A single-line comment --&gt;
+
+&lt;!--
+  A multiline comment.
+  Nothing in here is rendered.
+--&gt;
+
+&lt;!-- Comment out a block of markup --&gt;
+&lt;!--
+  &lt;div class="hidden-during-development"&gt;...&lt;/div&gt;
+--&gt;
+
+&lt;!-- Eliminating whitespace between inline elements --&gt;
+&lt;a href="#"&gt;Link&lt;/a&gt;&lt;!--
+--&gt;&lt;button&gt;Button&lt;/button&gt;</code></pre>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Comments start with <code>&lt;!--</code> and end with <code>--&gt;</code>.</li>
+      <li>Anything inside a comment is ignored by the browser.</li>
+      <li>Comments cannot live inside another tag.</li>
+      <li>Avoid <code>--</code> inside comment bodies for XML/SGML compatibility.</li>
+      <li>Use comments to eliminate whitespace between inline elements when precision matters.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Comment out a paragraph and confirm it disappears from the rendered page.</li>
+      <li>Write a single-line and a multi-line comment.</li>
+      <li>Remove the whitespace between two inline buttons using <code>&lt;!-- --&gt;</code>.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Tables</button>
+    <button class="nav-button" data-nav="next">Classes and IDs →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 10 — CLASSES AND IDS
+     ============================================================ -->
+<section id="ch-classes-and-ids" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Two · Content and Identity · Chapter 10</p>
+    <h2>Classes and IDs</h2>
+    <p class="chapter-tagline">Non-unique and unique hooks into your markup</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Classes and IDs make referencing elements from scripts and stylesheets easier. The <code>class</code> attribute names one or more classes and can be reused freely across a page. The <code>id</code> attribute names one element uniquely — the same <code>id</code> should never appear twice in a document. Classes are for CSS and repeated behaviours; IDs are for scripting and for anchor links.</p>
+    <p>In HTML5, an <code>id</code> must be unique, contain no whitespace, and contain at least one character — that is the entire rule. Digits, punctuation, even emoji are legal. However, IDs that are legal in HTML may cause trouble in CSS (which historically disallowed leading digits), JavaScript, and regular expressions. Stick to alphanumerics, hyphens, and underscores.</p>
+    <p>Duplicate IDs are a common source of bugs. CSS selectors still work — they match every matching element — but <code>document.getElementById</code> returns only the first. The rest of the page may render but scripts will silently misbehave.</p>
+    <pre class="code-example"><code>&lt;div class="highlight"&gt;First item&lt;/div&gt;
+&lt;span class="highlight"&gt;Second item&lt;/span&gt;
+
+&lt;div id="main-container"&gt;...&lt;/div&gt;
+&lt;a href="#main-container"&gt;Jump to main&lt;/a&gt;
+
+&lt;div class="special left menu"&gt;Pink?&lt;/div&gt;
+&lt;!-- CSS: .special.left.menu { color: pink; } --&gt;</code></pre>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Classes are non-unique; IDs are unique within a document.</li>
+      <li>Use classes for styling; use IDs for scripting and anchor links.</li>
+      <li>HTML5 allows almost any non-empty string without whitespace as an ID.</li>
+      <li>Duplicate IDs do not break CSS but break <code>getElementById</code>.</li>
+      <li>Prefer class selectors over ID selectors in CSS.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Give three elements the same class and style them together.</li>
+      <li>Create a duplicate ID and observe the difference between CSS and JS behaviour.</li>
+      <li>Link to a section using an ID and an anchor.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Comments</button>
+    <button class="nav-button" data-nav="next">Data Attributes →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 11 — DATA ATTRIBUTES
+     ============================================================ -->
+<section id="ch-data-attributes" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Two · Content and Identity · Chapter 11</p>
+    <h2>Data Attributes</h2>
+    <p class="chapter-tagline">Store your own data on any element — without inventing attributes</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>HTML5 <code>data-*</code> attributes provide a standard way to store data on HTML elements. The name after <code>data-</code> is up to you; the value is a string. You can read and modify these attributes from JavaScript via <code>element.dataset</code> or via <code>getAttribute</code>/<code>setAttribute</code>.</p>
+    <p>Before HTML5, developers invented non-standard attributes to carry data — usually in the <code>value</code> attribute of non-form elements, or in arbitrary names. Browsers ignored them when rendering, which made them useful. But they were invalid HTML and could confuse validators and future versions of the language. <code>data-*</code> gives this practice a proper home.</p>
+    <p>Data attributes work in every modern browser. In older browsers, the attributes themselves are preserved but the convenience <code>dataset</code> API is not — use <code>getAttribute("data-foo")</code> instead.</p>
+    <pre class="code-example"><code>&lt;div data-submitted="yes" class="user_profile"&gt;
+  ... some content ...
+&lt;/div&gt;
+
+&lt;script&gt;
+  var el = document.querySelector(".user_profile");
+  console.log(el.dataset.submitted);          // "yes"
+  console.log(el.getAttribute("data-submitted")); // "yes"
+&lt;/script&gt;</code></pre>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li><code>data-*</code> attributes hold arbitrary custom data on any element.</li>
+      <li>Read them with <code>element.dataset</code> or <code>getAttribute</code>.</li>
+      <li>Older browsers preserve the attributes but not the <code>dataset</code> API.</li>
+      <li>Use <code>data-*</code> instead of inventing non-standard attribute names.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Add three <code>data-*</code> attributes to a <code>&lt;div&gt;</code> and read them from the console.</li>
+      <li>Store a JSON string in a data attribute and parse it in JavaScript.</li>
+      <li>Update a data attribute on click.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Classes and IDs</button>
+    <button class="nav-button" data-nav="next">Linking Resources →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 12 — LINKING RESOURCES
+     ============================================================ -->
+<section id="ch-linking-resources" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Two · Content and Identity · Chapter 12</p>
+    <h2>Linking Resources</h2>
+    <p class="chapter-tagline">The <code>&lt;link&gt;</code> element — stylesheets, favicons, and performance hints</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>The <code>&lt;link&gt;</code> element links external resources into the current document. By far its most common use is stylesheets — <code>&lt;link rel="stylesheet" href="path/to.css"&gt;</code> — but it also declares favicons, alternate stylesheets, RSS feeds, prev/next relationships, and performance hints.</p>
+    <p>Performance hints include <code>dns-prefetch</code> (resolve DNS for a URL ahead of time), <code>preconnect</code> (DNS + TCP + TLS), <code>prefetch</code> (download a resource the user is likely to need), and <code>prerender</code> (fetch and render a page in the background). <code>dns-prefetch</code> only resolves the domain; <code>prefetch</code> downloads the resource itself.</p>
+    <p>The <code>media</code> attribute lets you load stylesheets conditionally — for example, <code>media="print"</code> loads the sheet only when printing. The <code>integrity</code> attribute lets you specify a base64-encoded hash of the linked resource, so the browser can verify that it has not been tampered with — essential for CDN-hosted assets.</p>
+    <pre class="code-example"><code>&lt;link rel="stylesheet" href="path/to.css"&gt;
+&lt;link rel="stylesheet" href="print.css" media="print"&gt;
+
+&lt;link rel="icon" type="image/png" href="/favicon.png"&gt;
+
+&lt;link rel="dns-prefetch" href="//cdn.example.com"&gt;
+&lt;link rel="preconnect" href="https://cdn.example.com"&gt;
+&lt;link rel="prefetch" href="/next-page.html"&gt;
+
+&lt;link rel="stylesheet" href="https://cdn.example.com/lib.css"
+      integrity="sha384-..." crossorigin="anonymous"&gt;</code></pre>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li><code>&lt;link&gt;</code> is most often used for stylesheets and favicons.</li>
+      <li><code>media</code> loads a stylesheet only under certain conditions.</li>
+      <li>Performance hints: <code>dns-prefetch</code>, <code>preconnect</code>, <code>prefetch</code>, <code>prerender</code>.</li>
+      <li><code>integrity</code> verifies CDN-hosted resources with a hash.</li>
+      <li>Use <code>crossorigin</code> with <code>integrity</code> when fetching from another origin.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Add a favicon link to a page.</li>
+      <li>Add a print stylesheet that hides navigation.</li>
+      <li>Use <code>dns-prefetch</code> for a third-party domain.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Data Attributes</button>
+    <button class="nav-button" data-nav="next">Part Three →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     PART THREE DIVIDER
+     ============================================================ -->
+<section id="part-three" class="book-page cover-page part-page part-three">
+  <div class="cover-content">
+    <p class="part-number">Part Three</p>
+    <h1>Media and Forms</h1>
+    <p class="part-desc">JavaScript, CSS, images, image maps, input controls, and forms — the tools that make HTML interactive and visual.</p>
+  </div>
+  <div class="book-nav">
+    <button class="nav-button" data-nav="next">Begin Chapter 13 →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 13 — INCLUDE JAVASCRIPT CODE IN HTML
+     ============================================================ -->
+<section id="ch-include-javascript" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Three · Media and Forms · Chapter 13</p>
+    <h2>Include JavaScript Code in HTML</h2>
+    <p class="chapter-tagline">Scripts inline, external, async, deferred — and noscript</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>The <code>&lt;script&gt;</code> element embeds or links JavaScript. Standard practice is to place script tags just before the closing <code>&lt;/body&gt;</code> tag: loading scripts last lets the visual content render quickly, and discourages the script from trying to touch elements that have not yet loaded.</p>
+    <p>Two attributes change when scripts execute. <code>async</code> downloads the script in parallel and runs it as soon as it is ready, interrupting HTML parsing. <code>defer</code> also downloads in parallel but waits until HTML parsing is complete before executing, and preserves the original order of scripts. Use <code>defer</code> for most application code; use <code>async</code> for independent third-party scripts like analytics.</p>
+    <p>The <code>&lt;noscript&gt;</code> element shows its content when scripts are disabled or unsupported. It can appear in the <code>&lt;head&gt;</code> or <code>&lt;body&gt;</code>. Always give users some graceful message when your page relies on JavaScript.</p>
+    <pre class="code-example"><code>&lt;!-- Synchronous, before the closing body tag --&gt;
+&lt;script src="app.js"&gt;&lt;/script&gt;
+
+&lt;!-- Asynchronous --&gt;
+&lt;script src="analytics.js" async&gt;&lt;/script&gt;
+
+&lt;!-- Deferred --&gt;
+&lt;script src="app.js" defer&gt;&lt;/script&gt;
+
+&lt;!-- Inline --&gt;
+&lt;script&gt;
+  document.write("Hello, world!");
+&lt;/script&gt;
+
+&lt;noscript&gt;This browser does not support JavaScript.&lt;/noscript&gt;</code></pre>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Place script tags just before <code>&lt;/body&gt;</code> for fast rendering.</li>
+      <li><code>async</code> runs as soon as downloaded; order not guaranteed.</li>
+      <li><code>defer</code> runs after HTML parsing; order guaranteed.</li>
+      <li><code>&lt;noscript&gt;</code> shows content when JavaScript is off.</li>
+      <li>Prefer external files for caching and maintainability.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Load a script with <code>async</code>, then with <code>defer</code>, and observe the timing.</li>
+      <li>Disable JavaScript in your browser and confirm the <code>&lt;noscript&gt;</code> text appears.</li>
+      <li>Add an inline script that logs the page title to the console.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Part Three</button>
+    <button class="nav-button" data-nav="next">Using HTML with CSS →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 14 — USING HTML WITH CSS
+     ============================================================ -->
+<section id="ch-using-html-with-css" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Three · Media and Forms · Chapter 14</p>
+    <h2>Using HTML with CSS</h2>
+    <p class="chapter-tagline">External, internal, and inline — the three ways to attach styles</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>CSS provides styles to HTML elements. There are three ways to attach CSS to a document. External stylesheets use a <code>&lt;link&gt;</code> tag in the document's <code>&lt;head&gt;</code> and are the recommended approach for real projects. Internal stylesheets use a <code>&lt;style&gt;</code> tag inside <code>&lt;head&gt;</code> and are useful for single-page demos. Inline styles use the <code>style</code> attribute on individual elements and are strongly discouraged, because they mix content with presentation.</p>
+    <p>Multiple stylesheets can be loaded. When they conflict, later declarations win — but CSS specificity and source order also matter, so the general rule is only a starting point. A widely-used CDN stylesheet (like Bootstrap) can be dropped in with a single <code>&lt;link&gt;</code>, complete with <code>integrity</code> and <code>crossorigin</code> attributes for security.</p>
+    <pre class="code-example"><code>&lt;!-- External stylesheet (preferred) --&gt;
+&lt;head&gt;
+  &lt;link rel="stylesheet" href="stylesheet.css"&gt;
+&lt;/head&gt;
+
+&lt;!-- Internal stylesheet --&gt;
+&lt;head&gt;
+  &lt;style&gt;
+    body { background-color: gray; }
+    p    { background-color: blue; }
+  &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;!-- Inline style (avoid) --&gt;
+&lt;span style="color:red"&gt;This text will appear in red.&lt;/span&gt;</code></pre>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>External stylesheets are the recommended approach.</li>
+      <li>Internal stylesheets live in a <code>&lt;style&gt;</code> block in <code>&lt;head&gt;</code>.</li>
+      <li>Inline styles mix content with presentation — avoid them.</li>
+      <li>When multiple stylesheets conflict, later declarations usually win.</li>
+      <li>Use <code>integrity</code> and <code>crossorigin</code> for CDN-hosted CSS.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Add an external, an internal, and an inline style to the same page.</li>
+      <li>Load two stylesheets that both set body colour and observe which wins.</li>
+      <li>Link Bootstrap from a CDN with an integrity hash.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Include JavaScript</button>
+    <button class="nav-button" data-nav="next">Images →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 15 — IMAGES
+     ============================================================ -->
+<section id="ch-images" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Three · Media and Forms · Chapter 15</p>
+    <h2>Images</h2>
+    <p class="chapter-tagline">The <code>&lt;img&gt;</code> element and the art of writing good alt text</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>The <code>&lt;img&gt;</code> tag inserts an image into a page. Its two essential attributes are <code>src</code> — the URL of the image — and <code>alt</code> — the alternative text describing the image. Images are technically not embedded in HTML; the <code>&lt;img&gt;</code> tag creates a holding space for the referenced image. Images can also be embedded directly via a base64 <code>data:</code> URL.</p>
+    <p>Alt text is used by screen readers and search engines, so writing good alt text matters. The rule of thumb: the page should still make sense if you replace every image with its alt attribute. Decorative images should have an empty <code>alt=""</code>; images that convey meaning should have descriptive text. A missing <code>alt</code> attribute is not the same as an empty one — the former tells screen readers the image matters but has no textual equivalent.</p>
+    <p>For responsive images, use <code>srcset</code> with <code>sizes</code> to give the browser a choice of resolutions, or the <code>&lt;picture&gt;</code> element with <code>&lt;source&gt;</code> children for art direction. The <code>src</code> attribute is always the fallback.</p>
+    <pre class="code-example"><code>&lt;img src="images/hello.png" alt="Hello World"&gt;
+
+&lt;img src="avatar.png" alt=""&gt; An anonymous user wrote:
+
+&lt;img srcset="img/hello-300.jpg 300w,
+             img/hello-600.jpg 600w,
+             img/hello-900.jpg 900w"
+     sizes="(min-width: 1200px) 580px,
+            (min-width: 640px) 48vw,
+            98vw"
+     src="img/hello-900.jpg" alt="hello"&gt;
+
+&lt;picture&gt;
+  &lt;source media="(min-width: 600px)" srcset="large.jpg"&gt;
+  &lt;source media="(min-width: 450px)" srcset="small.jpg"&gt;
+  &lt;img src="default.jpg" alt="default"&gt;
+&lt;/picture&gt;</code></pre>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li><code>src</code> and <code>alt</code> are the two essential attributes of <code>&lt;img&gt;</code>.</li>
+      <li>Decorative images use <code>alt=""</code>; meaningful images need real descriptions.</li>
+      <li><code>srcset</code> + <code>sizes</code> selects the best image for the viewport and device pixel ratio.</li>
+      <li><code>&lt;picture&gt;</code> + <code>&lt;source&gt;</code> enables art direction across breakpoints.</li>
+      <li>Wrap <code>&lt;img&gt;</code> in <code>&lt;a&gt;</code> to make the image a link.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Add an image with a descriptive <code>alt</code> attribute.</li>
+      <li>Convert a single image into a responsive image using <code>srcset</code>.</li>
+      <li>Use <code>&lt;picture&gt;</code> to serve two different crops at two widths.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Using HTML with CSS</button>
+    <button class="nav-button" data-nav="next">Image Maps →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 16 — IMAGE MAPS
+     ============================================================ -->
+<section id="ch-image-maps" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Three · Media and Forms · Chapter 16</p>
+    <h2>Image Maps</h2>
+    <p class="chapter-tagline">Clickable regions on a single image</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>An image map is an image with clickable regions — <code>&lt;area&gt;</code> elements inside a <code>&lt;map&gt;</code> element — that act as hyperlinks. The <code>&lt;img&gt;</code> element references the map with a <code>usemap</code> attribute containing a hash and the map's <code>name</code>.</p>
+    <p>Each <code>&lt;area&gt;</code> can specify a <code>shape</code> (<code>poly</code>, <code>rect</code>, or <code>circle</code>), <code>coords</code>, <code>href</code>, and <code>alt</code>. The coordinate scheme depends on the shape. When a user's cursor moves over a clickable area, the browser shows a pointer.</p>
+    <pre class="code-example"><code>&lt;img src="shapes.gif" usemap="#shapes" alt="Three shapes"&gt;
+&lt;map name="shapes"&gt;
+  &lt;area shape="polygon" coords="79,6,5,134,153,134"
+        href="triangle.html" alt="Triangle"&gt;
+  &lt;area shape="rectangle" coords="177,6,306,134"
+        href="rectangle.html" alt="Rectangle"&gt;
+  &lt;area shape="circle" coords="397,71,65"
+        href="circle.html" alt="Circle"&gt;
+&lt;/map&gt;</code></pre>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>An image map is an image with clickable <code>&lt;area&gt;</code> regions.</li>
+      <li><code>usemap</code> on the image points to a <code>&lt;map&gt;</code> by name.</li>
+      <li>Shapes: <code>poly</code>, <code>rect</code>, <code>circle</code> — each with its own <code>coords</code> format.</li>
+      <li>Every <code>&lt;area&gt;</code> should have <code>alt</code> text.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Create an image with three rectangular hotspots.</li>
+      <li>Add a circular hotspot.</li>
+      <li>Test that the pointer changes on hover over each area.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Images</button>
+    <button class="nav-button" data-nav="next">Input Controls →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 17 — INPUT CONTROL ELEMENTS
+     ============================================================ -->
+<section id="ch-input-control-elements" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Three · Media and Forms · Chapter 17</p>
+    <h2>Input Control Elements</h2>
+    <p class="chapter-tagline">Every <code>type</code> of input, from text to datetime</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Input tags are HTML elements designed to take a specific form of input from users. Different <code>type</code> values regulate the format of data and provide security for sensitive fields. The default type is <code>text</code>: a single-line field for arbitrary strings. Setting <code>size</code> controls the visual width of a text field, not the maximum length — for that, use <code>maxlength</code>.</p>
+    <p>Checkboxes and radio buttons are written as <code>&lt;input type="checkbox"&gt;</code> and <code>&lt;input type="radio"&gt;</code>. A checkbox is binary and independent; radio buttons form a group identified by a shared <code>name</code>, and only one can be selected. Always wrap each in a <code>&lt;label&gt;</code> for accessibility.</p>
+    <p>HTML5 added input validation: <code>required</code>, <code>minlength</code>/<code>maxlength</code>, <code>min</code>/<code>max</code>, <code>pattern</code>, and <code>accept</code>. Validation is enforced when submitting a form and can be bypassed — it never replaces server-side validation. New types like <code>email</code>, <code>url</code>, <code>tel</code>, <code>date</code>, <code>color</code>, <code>number</code>, <code>range</code>, <code>search</code>, <code>time</code>, and <code>week</code> provide specialised controls and automatic validation where supported.</p>
+    <pre class="code-example"><code>&lt;input type="text" size="50" placeholder="Name"&gt;
+
+&lt;label&gt;&lt;input type="checkbox" name="subscribe" checked&gt; Subscribe&lt;/label&gt;
+
+&lt;input type="radio" name="color" id="red"   value="#F00"&gt;
+&lt;label for="red"&gt;Red&lt;/label&gt;
+&lt;input type="radio" name="color" id="green" value="#0F0"&gt;
+&lt;label for="green"&gt;Green&lt;/label&gt;
+
+&lt;input type="email" name="email" required&gt;
+&lt;input type="number" min="0" max="100" step="1"&gt;
+&lt;input type="file" accept="image/*"&gt;</code></pre>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>The default input type is <code>text</code>.</li>
+      <li>Checkboxes are independent; radio buttons in the same <code>name</code> group are mutually exclusive.</li>
+      <li>HTML5 validation attributes: <code>required</code>, <code>minlength</code>, <code>min</code>, <code>max</code>, <code>pattern</code>, <code>accept</code>.</li>
+      <li>Client validation never replaces server-side validation.</li>
+      <li>Wrap inputs in <code>&lt;label&gt;</code> — it improves accessibility and clickability.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Create a form with a text field, a checkbox, and a radio group.</li>
+      <li>Add <code>required</code> and <code>pattern</code> validation to a number field.</li>
+      <li>Use <code>accept="image/*"</code> on a file input.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Image Maps</button>
+    <button class="nav-button" data-nav="next">Forms →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 18 — FORMS
+     ============================================================ -->
+<section id="ch-forms" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Three · Media and Forms · Chapter 18</p>
+    <h2>Forms</h2>
+    <p class="chapter-tagline">Collecting input and submitting it — GET, POST, and files</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Forms group inputs and submit their data to a server. The <code>action</code> attribute names the target URL; <code>method</code> selects GET (data appended to the URL as a query string) or POST (data sent in the request body). If <code>action</code> is omitted, the form submits to the current page.</p>
+    <p>To upload files, set <code>enctype="multipart/form-data"</code> — otherwise the file input will submit only the filename. Each control that should submit data needs a <code>name</code> attribute; without it, the field is skipped.</p>
+    <p>Use <code>&lt;fieldset&gt;</code> to group related inputs and <code>&lt;legend&gt;</code> to label the group. The <code>target</code> attribute controls where the response opens; <code>novalidate</code> disables client-side validation. On the submit button, <code>formnovalidate</code> disables validation only for that button — perfect for a "save draft" button alongside a "publish" button.</p>
+    <pre class="code-example"><code>&lt;form action="submit.php" method="post"
+      enctype="multipart/form-data"
+      accept-charset="UTF-8"&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Contact details&lt;/legend&gt;
+    &lt;label for="name"&gt;Name:&lt;/label&gt;
+    &lt;input type="text" id="name" name="name" required&gt;
+
+    &lt;label for="photo"&gt;Photo:&lt;/label&gt;
+    &lt;input type="file" id="photo" name="photo" accept="image/*"&gt;
+  &lt;/fieldset&gt;
+
+  &lt;button type="submit"&gt;Publish&lt;/button&gt;
+  &lt;button type="submit" formnovalidate&gt;Save draft&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li><code>action</code> is the URL; <code>method</code> is GET or POST.</li>
+      <li>Use <code>enctype="multipart/form-data"</code> for file uploads.</li>
+      <li>Every field needs a <code>name</code> to submit its value.</li>
+      <li><code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code> group and label related inputs.</li>
+      <li><code>formnovalidate</code> on a submit button skips validation for that button only.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Build a form that submits to a server and includes a file input.</li>
+      <li>Add two submit buttons — one validating, one not.</li>
+      <li>Compare GET and POST submissions in your browser's developer tools.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Input Controls</button>
+    <button class="nav-button" data-nav="next">Part Four →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     PART FOUR DIVIDER
+     ============================================================ -->
+<section id="part-four" class="book-page cover-page part-page part-four">
+  <div class="cover-content">
+    <p class="part-number">Part Four</p>
+    <h1>Semantics and Structure</h1>
+    <p class="part-desc">Divs, sectioning elements, navigation bars, labels, output elements, and void elements — how to give your markup meaning.</p>
+  </div>
+  <div class="book-nav">
+    <button class="nav-button" data-nav="next">Begin Chapter 19 →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 19 — DIV ELEMENT
+     ============================================================ -->
+<section id="ch-div-element" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Four · Semantics and Structure · Chapter 19</p>
+    <h2>Div Element</h2>
+    <p class="chapter-tagline">The last-resort container — powerful and dangerous</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>The <code>&lt;div&gt;</code> element groups other elements and separates one block of content from another. It has no inherent meaning — W3C calls it "an element of last resort". Use <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;nav&gt;</code>, or <code>&lt;fieldset&gt;</code> where those fit better; reach for <code>&lt;div&gt;</code> only when no semantic element is appropriate.</p>
+    <p>A <code>&lt;div&gt;</code> is a block-level element, so it occupies the full width of the page (unless CSS overrides this). Nesting <code>&lt;div&gt;</code>s is common, but deep nesting is an anti-pattern: aim for shallow hierarchies. W3C advises not nesting deeper than six levels.</p>
+    <pre class="code-example"><code>&lt;div class="outer-div"&gt;
+  &lt;div class="inner-div"&gt;
+    &lt;p&gt;This is a paragraph.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="inner-div"&gt;
+    &lt;p&gt;This is another paragraph.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li><code>&lt;div&gt;</code> is a generic container with no semantic meaning.</li>
+      <li>Prefer semantic elements (<code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;nav&gt;</code>) when applicable.</li>
+      <li>Divs are block-level by default; CSS can change that.</li>
+      <li>Avoid deep nesting — aim for six levels or fewer.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Rewrite a three-level nested <code>&lt;div&gt;</code> structure using semantic elements.</li>
+      <li>Compare a <code>&lt;div&gt;</code> and a <code>&lt;section&gt;</code> in an accessibility inspector.</li>
+      <li>Style one <code>&lt;div&gt;</code> and leave another unstyled to see the default block behaviour.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Part Four</button>
+    <button class="nav-button" data-nav="next">Sectioning Elements →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 20 — SECTIONING ELEMENTS
+     ============================================================ -->
+<section id="ch-sectioning-elements" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Four · Semantics and Structure · Chapter 20</p>
+    <h2>Sectioning Elements</h2>
+    <p class="chapter-tagline">nav, article, main, header, footer, section — the semantics of a page</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>HTML5 introduced semantic sectioning elements so that a page's structure is expressed in markup, not just in visual layout. <code>&lt;nav&gt;</code> holds primary navigation; <code>&lt;article&gt;</code> holds self-contained content that could stand alone in an RSS feed; <code>&lt;main&gt;</code> holds the unique main content of a page (only once per page); <code>&lt;header&gt;</code> and <code>&lt;footer&gt;</code> hold introductory and closing content; <code>&lt;section&gt;</code> groups thematically related content that has a heading.</p>
+    <p>Rules worth remembering: <code>&lt;main&gt;</code> must not be inside <code>&lt;article&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;header&gt;</code>, or <code>&lt;nav&gt;</code>. <code>&lt;main&gt;</code> is unique to a page — repeating it across pages is a mistake. When nesting <code>&lt;article&gt;</code> elements, the inner articles should be related to the outer one (e.g. comments on a blog post). Use <code>&lt;section&gt;</code> with a heading, not as a generic container — for that, use <code>&lt;div&gt;</code>.</p>
+    <p>Adding ARIA <code>role</code> attributes (<code>role="navigation"</code>, <code>role="main"</code>, <code>role="article"</code>) is recommended for older user agents that predate HTML5.</p>
+    <pre class="code-example"><code>&lt;body&gt;
+  &lt;header&gt;
+    &lt;nav&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/about"&gt;About&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+
+  &lt;main&gt;
+    &lt;h1&gt;Blog Post&lt;/h1&gt;
+    &lt;p&gt;An introduction to the post.&lt;/p&gt;
+
+    &lt;section&gt;
+      &lt;h2&gt;Chapter 1&lt;/h2&gt;
+      &lt;p&gt;...&lt;/p&gt;
+    &lt;/section&gt;
+
+    &lt;article&gt;
+      &lt;h2&gt;A comment&lt;/h2&gt;
+      &lt;p&gt;Excellent!&lt;/p&gt;
+    &lt;/article&gt;
+  &lt;/main&gt;
+
+  &lt;footer&gt;
+    &lt;p&gt;&amp;copy; 2024&lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;</code></pre>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li><code>&lt;nav&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;section&gt;</code> express page structure semantically.</li>
+      <li><code>&lt;main&gt;</code> is unique per page and cannot sit inside <code>&lt;article&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, or <code>&lt;nav&gt;</code>.</li>
+      <li>Nested <code>&lt;article&gt;</code>s should relate to the outer one.</li>
+      <li><code>&lt;section&gt;</code> needs a heading; use <code>&lt;div&gt;</code> for purely presentational containers.</li>
+      <li>Add ARIA <code>role</code> attributes for older user agents.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Rewrite a page that uses divs into one that uses <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>, and <code>&lt;footer&gt;</code>.</li>
+      <li>Add ARIA roles to the same page for older user agents.</li>
+      <li>Check your page in the accessibility inspector of your browser's dev tools.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Div Element</button>
+    <button class="nav-button" data-nav="next">Navigation Bars →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 21 — NAVIGATION BARS
+     ============================================================ -->
+<section id="ch-navigation-bars" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Four · Semantics and Structure · Chapter 21</p>
+    <h2>Navigation Bars</h2>
+    <p class="chapter-tagline">A list of links — wrapped in a <code>&lt;nav&gt;</code></p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Navigation bars are essentially lists of links, so the <code>&lt;ul&gt;</code> and <code>&lt;li&gt;</code> elements are the natural home for them. In HTML5, wrap the list in a <code>&lt;nav&gt;</code> element to mark it as a navigation region. Every part of the page that contains primary navigation — typically the top bar, sometimes a sidebar — should be a <code>&lt;nav&gt;</code>.</p>
+    <p>Avoid overusing <code>&lt;nav&gt;</code>. A footer with a small list of legal links is not navigation in the same sense — a plain <code>&lt;footer&gt;</code> with links is sufficient. Screen readers can jump directly to <code>&lt;nav&gt;</code> elements, so use them where the page's primary navigation actually lives.</p>
+    <pre class="code-example"><code>&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/about"&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Navigation bars are lists of links — use <code>&lt;ul&gt;</code>/<code>&lt;li&gt;</code>.</li>
+      <li>Wrap primary navigation in a <code>&lt;nav&gt;</code> element.</li>
+      <li>Use <code>&lt;nav&gt;</code> only for genuine navigation, not every group of links.</li>
+      <li>Screen readers can jump between <code>&lt;nav&gt;</code> elements.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Build a horizontal navigation bar with three links.</li>
+      <li>Add a second <code>&lt;nav&gt;</code> for a sidebar.</li>
+      <li>Tab through the navigation and observe where focus goes.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Sectioning Elements</button>
+    <button class="nav-button" data-nav="next">Label Element →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 22 — LABEL ELEMENT
+     ============================================================ -->
+<section id="ch-label-element" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Four · Semantics and Structure · Chapter 22</p>
+    <h2>Label Element</h2>
+    <p class="chapter-tagline">Give every input a name — and make the name clickable</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>The <code>&lt;label&gt;</code> element attaches a readable label to a form control. It can wrap the control, or point at it with a <code>for</code> attribute whose value matches the control's <code>id</code>. Either way, clicking the label focuses or activates the associated control — a big usability and accessibility win, especially for checkbox and radio buttons.</p>
+    <p>Never put more than one control inside a single <code>&lt;label&gt;</code>. If you need to associate a control that lives elsewhere in the document, use the <code>for</code> attribute — that is also how to attach a label to a form defined outside the current subtree. In HTML5, the <code>form</code> attribute lets a control associate itself with a form even when it lives outside the form's markup.</p>
+    <pre class="code-example"><code>&lt;!-- Wrapping --&gt;
+&lt;label&gt;
+  &lt;input type="checkbox" name="cats"&gt;
+  I like cats!
+&lt;/label&gt;
+
+&lt;!-- Referencing --&gt;
+&lt;input id="cats" type="checkbox" name="cats"&gt;
+&lt;label for="cats"&gt;I like cats!&lt;/label&gt;
+
+&lt;!-- Association across the document --&gt;
+&lt;form id="login"&gt;
+  &lt;input id="username" type="text" name="username"&gt;
+  &lt;input type="submit" value="Log in"&gt;
+&lt;/form&gt;
+&lt;label for="username" form="login"&gt;Username:&lt;/label&gt;</code></pre>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li><code>&lt;label&gt;</code> gives a form control a readable, clickable name.</li>
+      <li>Wrap the control, or use <code>for="id"</code> to link the label and control.</li>
+      <li>Never put more than one control in a single label.</li>
+      <li><code>form="id"</code> associates a control with a form elsewhere in the document.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Add a <code>&lt;label&gt;</code> wrapper to a checkbox.</li>
+      <li>Add a <code>for</code>-based label to a text input.</li>
+      <li>Place a label outside a form and use the <code>form</code> attribute to link it.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Navigation Bars</button>
+    <button class="nav-button" data-nav="next">Output Element →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 23 — OUTPUT ELEMENT
+     ============================================================ -->
+<section id="ch-output-element" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Four · Semantics and Structure · Chapter 23</p>
+    <h2>Output Element</h2>
+    <p class="chapter-tagline">A live region for calculated results</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>The <code>&lt;output&gt;</code> element represents the result of a calculation or user action. It is a form-associated element: it can be associated with a form, and it accepts <code>for</code> and <code>form</code> attributes to declare which controls it is a result for and which form it belongs to. Its primary purpose is to give assistive technology a live region that announces calculated values.</p>
+    <p><code>&lt;output&gt;</code> needs JavaScript to actually display live values; the element itself does not compute anything. Even though inputs may have <code>type="number"</code>, their <code>.value</code> is a string — convert with <code>parseInt</code>, <code>parseFloat</code>, or <code>Number()</code>.</p>
+    <pre class="code-example"><code>&lt;form id="form1" oninput="out1.value = parseInt(in1.value, 10) + parseInt(in2.value, 10)"&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Output Example&lt;/legend&gt;
+    &lt;input type="number" id="in1" value="0"&gt;
+    +
+    &lt;input type="number" id="in2" value="0"&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;
+
+&lt;output name="out1" for="in1 in2" form="form1"&gt;0&lt;/output&gt;</code></pre>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li><code>&lt;output&gt;</code> represents the result of a calculation.</li>
+      <li>It is a form-associated element with <code>for</code> and <code>form</code> attributes.</li>
+      <li>It needs JavaScript to actually compute and update values.</li>
+      <li>Input <code>.value</code> is always a string — convert before doing arithmetic.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Build a two-number adder using <code>&lt;output&gt;</code>.</li>
+      <li>Associate an <code>&lt;output&gt;</code> with two inputs using <code>for</code>.</li>
+      <li>Place an <code>&lt;output&gt;</code> outside a form and use <code>form</code> to associate it.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Label Element</button>
+    <button class="nav-button" data-nav="next">Void Elements →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 24 — VOID ELEMENTS
+     ============================================================ -->
+<section id="ch-void-elements" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Four · Semantics and Structure · Chapter 24</p>
+    <h2>Void Elements</h2>
+    <p class="chapter-tagline">Elements with no closing tag and no content</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Most HTML elements require an opening tag, a closing tag, and content. Void elements are the exception: they have no content and no closing tag. HTML4 had thirteen of them — <code>area</code>, <code>base</code>, <code>br</code>, <code>col</code>, <code>hr</code>, <code>img</code>, <code>input</code>, <code>link</code>, <code>meta</code>, <code>param</code>. HTML5 adds <code>command</code> (obsolete), <code>keygen</code> (deprecated), <code>source</code>, and <code>track</code>, and formally includes <code>embed</code> and <code>wbr</code>.</p>
+    <p>In HTML5, a void element is written as just its opening tag: <code>&lt;br&gt;</code>, <code>&lt;hr&gt;</code>, <code>&lt;input&gt;</code>. The self-closing slash (<code>&lt;br /&gt;</code>) is XHTML syntax; it is tolerated in HTML5 but not necessary. If you do use it, put a space before the slash: <code>&lt;br /&gt;</code>, not <code>&lt;br/&gt;</code>.</p>
+    <pre class="code-example"><code>&lt;img src="logo.png" alt="Logo"&gt;
+&lt;br&gt;
+&lt;hr&gt;
+&lt;input type="number" placeholder="Enter a number"&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;link rel="stylesheet" href="styles.css"&gt;</code></pre>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Void elements have no content and no closing tag.</li>
+      <li>Common void elements: <code>img</code>, <code>br</code>, <code>hr</code>, <code>input</code>, <code>meta</code>, <code>link</code>.</li>
+      <li>The self-closing slash is XHTML syntax; optional in HTML5.</li>
+      <li>Never add a closing tag to a void element.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Write a page with three void elements.</li>
+      <li>Try adding a closing tag to <code>&lt;br&gt;</code> and see what the validator says.</li>
+      <li>Convert all void elements to self-closing form and re-validate.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Output Element</button>
+    <button class="nav-button" data-nav="next">Part Five →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     PART FIVE DIVIDER
+     ============================================================ -->
+<section id="part-five" class="book-page cover-page part-page part-five">
+  <div class="cover-content">
+    <p class="part-number">Part Five</p>
+    <h1>Embedded Media</h1>
+    <p class="part-desc">Audio, video, progress, selection menus, embeds, iframes, and content languages — the HTML that reaches beyond text.</p>
+  </div>
+  <div class="book-nav">
+    <button class="nav-button" data-nav="next">Begin Chapter 25 →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 25 — MEDIA ELEMENTS
+     ============================================================ -->
+<section id="ch-media-elements" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Five · Embedded Media · Chapter 25</p>
+    <h2>Media Elements</h2>
+    <p class="chapter-tagline">Audio and video without plugins</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>HTML5 introduced <code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code>, so pages can embed media without Flash or other plugins. Both accept a <code>src</code> attribute, or one or more <code>&lt;source&gt;</code> elements from which the browser chooses the format it supports best. The <code>&lt;track&gt;</code> element attaches subtitles or captions.</p>
+    <p>Attributes common to both elements: <code>controls</code> (show playback UI), <code>autoplay</code> (start playing when ready), <code>loop</code> (repeat), <code>muted</code> (no sound — required by most browsers if <code>autoplay</code> is used), and <code>poster</code> (an image shown until video loads). Width and height are in pixels.</p>
+    <p>For decorative video backgrounds, use <code>autoplay muted loop</code> and provide multiple sources so the browser picks a codec it can decode. Always include fallback text inside the element for older browsers.</p>
+    <pre class="code-example"><code>&lt;video width="480" height="270" controls poster="poster.jpg"&gt;
+  &lt;source src="video.webm" type="video/webm"&gt;
+  &lt;source src="video.mp4" type="video/mp4"&gt;
+  Your browser doesn't support HTML5 video.
+&lt;/video&gt;
+
+&lt;audio controls&gt;
+  &lt;source src="audio.ogg" type="audio/ogg"&gt;
+  &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+  Your browser doesn't support the audio element.
+&lt;/audio&gt;
+
+&lt;video autoplay muted loop poster="bg.jpg"&gt;
+  &lt;source src="bg.webm" type="video/webm"&gt;
+  &lt;source src="bg.mp4"  type="video/mp4"&gt;
+&lt;/video&gt;</code></pre>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li><code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code> embed media without plugins.</li>
+      <li>Provide multiple <code>&lt;source&gt;</code> formats for cross-browser support.</li>
+      <li><code>autoplay</code> usually requires <code>muted</code> in modern browsers.</li>
+      <li><code>&lt;track&gt;</code> adds subtitles or captions.</li>
+      <li><code>poster</code> shows an image before the video starts.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Embed a video with two source formats.</li>
+      <li>Add a <code>&lt;track&gt;</code> with an English subtitle file.</li>
+      <li>Create an autoplaying, muted, looping background video.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Part Five</button>
+    <button class="nav-button" data-nav="next">Progress Element →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 26 — PROGRESS ELEMENT
+     ============================================================ -->
+<section id="ch-progress-element" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Five · Embedded Media · Chapter 26</p>
+    <h2>Progress Element</h2>
+    <p class="chapter-tagline">A native bar for task progress</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>The <code>&lt;progress&gt;</code> element (new in HTML5) represents the progress of a task. The two key attributes are <code>value</code> (how much has been done) and <code>max</code> (the total). Omitting <code>value</code> shows an indeterminate progress bar — useful when you have no way to estimate.</p>
+    <p>Styling progress bars is notoriously awkward. Chrome, Safari, and Opera use <code>-webkit-appearance</code>; Firefox uses <code>-moz-appearance</code>. To style them, reset the appearance first and then apply background and colour. Internet Explorer 10+ supports the element but ignores <code>background-color</code> — use <code>color</code> instead.</p>
+    <p>For browsers without progress support, provide a fallback inside the element. Supporting browsers ignore the fallback content; older browsers render it.</p>
+    <pre class="code-example"><code>&lt;progress value="22" max="100"&gt;&lt;/progress&gt;
+
+&lt;!-- Fallback content --&gt;
+&lt;progress max="100" value="20"&gt;
+  &lt;div class="progress-bar"&gt;
+    &lt;span style="width: 20%;"&gt;Progress: 20%&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/progress&gt;
+
+&lt;style&gt;
+  progress[value] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 250px;
+    height: 20px;
+  }
+  progress[value]::-webkit-progress-bar { background-color: #eee; }
+  progress[value]::-webkit-progress-value { background-color: green; }
+  progress[value]::-moz-progress-bar { background-color: green; }
+&lt;/style&gt;</code></pre>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li><code>&lt;progress&gt;</code> represents the progress of a task.</li>
+      <li><code>value</code> and <code>max</code> control how much is done and how much total.</li>
+      <li>Omitting <code>value</code> yields an indeterminate bar.</li>
+      <li>Styling requires vendor-specific pseudo-elements.</li>
+      <li>Include fallback markup for older browsers.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Show a progress bar at 25% with a maximum of 100.</li>
+      <li>Make a determinate progress bar with a custom colour.</li>
+      <li>Compare the appearance in Chrome and Firefox.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Media Elements</button>
+    <button class="nav-button" data-nav="next">Selection Menu Controls →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 27 — SELECTION MENU CONTROLS
+     ============================================================ -->
+<section id="ch-selection-menu-controls" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Five · Embedded Media · Chapter 27</p>
+    <h2>Selection Menu Controls</h2>
+    <p class="chapter-tagline">select, option, optgroup, datalist — the user's choice</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>The <code>&lt;select&gt;</code> element generates a drop-down menu of <code>&lt;option&gt;</code> elements. The <code>size</code> attribute controls how many options are visible: 0 or 1 shows the standard drop-down; a value greater than 1 converts it to a scrollable list. The <code>multiple</code> attribute allows more than one choice and also turns the drop-down into a list box.</p>
+    <p>Each <code>&lt;option&gt;</code> has a <code>value</code> (what gets sent with the form) and a <code>label</code> (what the user sees). If the value is omitted, the option's text is used. The <code>selected</code> attribute marks the default choice — if several are marked in a single-select menu, the last one wins; in a multi-select menu, all marked options are selected.</p>
+    <p><code>&lt;optgroup&gt;</code> groups related options under a <code>label</code>. A disabled <code>&lt;optgroup&gt;</code> disables all its children. The <code>&lt;datalist&gt;</code> element provides autocomplete suggestions for an input — the user can still type anything they like.</p>
+    <pre class="code-example"><code>&lt;select name="fruit"&gt;
+  &lt;optgroup label="Fruits"&gt;
+    &lt;option value="banana"&gt;Bananas&lt;/option&gt;
+    &lt;option value="strawberry" selected&gt;Strawberries&lt;/option&gt;
+  &lt;/optgroup&gt;
+  &lt;optgroup label="Vegetables" disabled&gt;
+    &lt;option value="carrot"&gt;Carrots&lt;/option&gt;
+  &lt;/optgroup&gt;
+&lt;/select&gt;
+
+&lt;input list="languages"&gt;
+&lt;datalist id="languages"&gt;
+  &lt;option value="HTML"&gt;
+  &lt;option value="CSS"&gt;
+  &lt;option value="JavaScript"&gt;
+&lt;/datalist&gt;</code></pre>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li><code>&lt;select&gt;</code> + <code>&lt;option&gt;</code> create drop-down menus.</li>
+      <li><code>size</code> and <code>multiple</code> change the display from drop-down to list box.</li>
+      <li><code>selected</code> marks the default option(s).</li>
+      <li><code>&lt;optgroup&gt;</code> groups options under a label; disabling it disables all its children.</li>
+      <li><code>&lt;datalist&gt;</code> provides autocomplete suggestions for inputs.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Create a select with grouped options.</li>
+      <li>Add <code>multiple</code> and select two items.</li>
+      <li>Build a datalist attached to a text input.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Progress Element</button>
+    <button class="nav-button" data-nav="next">Embed →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 28 — EMBED
+     ============================================================ -->
+<section id="ch-embed" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Five · Embedded Media · Chapter 28</p>
+    <h2>Embed</h2>
+    <p class="chapter-tagline">Plug in external content — with a MIME type</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>The <code>&lt;embed&gt;</code> element (new in HTML5) provides an integration point for external, typically non-HTML, applications or interactive content — PDFs, Flash, and other plugins. Its <code>src</code> attribute is the URL; <code>type</code> declares the MIME type; <code>width</code> and <code>height</code> set the display size.</p>
+    <p>Unlike <code>&lt;object&gt;</code>, <code>&lt;embed&gt;</code> has no fallback content. If you need graceful degradation for older browsers, use <code>&lt;object&gt;</code> instead.</p>
+    <pre class="code-example"><code>&lt;embed src="document.pdf" type="application/pdf"
+       width="800" height="600"&gt;
+
+&lt;embed src="video.mp4" type="video/mp4"
+       width="640" height="480"&gt;</code></pre>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li><code>&lt;embed&gt;</code> embeds external (often non-HTML) content.</li>
+      <li><code>type</code> declares the MIME type of the embedded resource.</li>
+      <li><code>width</code> and <code>height</code> control its display size.</li>
+      <li><code>&lt;embed&gt;</code> has no fallback content — use <code>&lt;object&gt;</code> if you need one.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Embed a PDF and check that it appears in the browser.</li>
+      <li>Embed a video with the correct MIME type.</li>
+      <li>Rewrite your embed using <code>&lt;object&gt;</code> and add fallback text.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Selection Menu Controls</button>
+    <button class="nav-button" data-nav="next">IFrames →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 29 — IFRAMES
+     ============================================================ -->
+<section id="ch-iframes" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Five · Embedded Media · Chapter 29</p>
+    <h2>IFrames</h2>
+    <p class="chapter-tagline">A window into another page — and how to sandbox it</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>An inline frame (<code>&lt;iframe&gt;</code>) embeds another HTML page inside the current page. The <code>src</code> attribute is the page to embed; <code>width</code> and <code>height</code> set its dimensions (in CSS pixels; percentages are no longer allowed in HTML5). The <code>name</code> attribute lets a link or form target the frame.</p>
+    <p>The <code>sandbox</code> attribute is critical when embedding untrusted content. With an empty value, it disables scripts, forms, plugins, and popups, and treats the content as coming from a unique origin. You can relax individual restrictions by adding values like <code>allow-scripts</code>, <code>allow-forms</code>, and <code>allow-same-origin</code>. Sandboxing is not a replacement for sanitising input — it is one layer in a defence-in-depth strategy.</p>
+    <p>The <code>srcdoc</code> attribute embeds an entire HTML document as a string, rather than pointing at a URL. If both <code>src</code> and <code>srcdoc</code> are present, <code>srcdoc</code> wins. Use <code>&lt;iframe&gt;</code> sparingly — search engines may not crawl its content, and it has accessibility implications.</p>
+    <pre class="code-example"><code>&lt;iframe src="https://example.com/page" width="800" height="600"&gt;&lt;/iframe&gt;
+
+&lt;iframe sandbox src="https://example.com/untrusted"&gt;&lt;/iframe&gt;
+
+&lt;iframe sandbox="allow-scripts allow-forms"
+        src="https://example.com/interactive"&gt;&lt;/iframe&gt;
+
+&lt;iframe srcdoc="&lt;p&gt;Hello, embedded world!&lt;/p&gt;"&gt;&lt;/iframe&gt;
+
+&lt;iframe src="page.html" name="myFrame"&gt;&lt;/iframe&gt;
+&lt;a href="other.html" target="myFrame"&gt;Change the frame&lt;/a&gt;</code></pre>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li><code>&lt;iframe&gt;</code> embeds another page inside the current one.</li>
+      <li><code>sandbox</code> disables scripts, forms, and plugins by default.</li>
+      <li>Add <code>allow-scripts</code>, <code>allow-forms</code>, <code>allow-same-origin</code> selectively.</li>
+      <li><code>srcdoc</code> embeds inline HTML and takes precedence over <code>src</code>.</li>
+      <li>Use <code>name</code> + <code>target</code> to control the frame from outside.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Embed a page in an iframe with explicit dimensions.</li>
+      <li>Add sandbox and confirm scripts are disabled.</li>
+      <li>Use <code>srcdoc</code> to display a message without a separate file.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Embed</button>
+    <button class="nav-button" data-nav="next">Content Languages →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 30 — CONTENT LANGUAGES
+     ============================================================ -->
+<section id="ch-content-languages" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Five · Embedded Media · Chapter 30</p>
+    <h2>Content Languages</h2>
+    <p class="chapter-tagline">Declaring the language of a page and its parts</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>The <code>lang</code> attribute declares the human language of content. At the document level, put it on <code>&lt;html&gt;</code>: <code>&lt;html lang="en"&gt;</code>. This helps screen readers choose the right pronunciation, search engines index language, and browser spell-checkers behave.</p>
+    <p>You can override the language on any element — for example, an English page with a German quotation uses <code>&lt;span lang="de"&gt;</code>. Use BCP 47 language tags (<code>en</code>, <code>en-US</code>, <code>de</code>, <code>fr-CA</code>), not invented codes.</p>
+    <p>Regional URLs and language-specific content types use <code>hreflang</code> on links. The <code>dir</code> attribute (also global) selects left-to-right (<code>ltr</code>) or right-to-left (<code>rtl</code>) — crucial for Arabic, Hebrew, and Persian.</p>
+    <pre class="code-example"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;...&lt;/head&gt;
+  &lt;body&gt;
+    &lt;p lang="en"&gt;An English paragraph.&lt;/p&gt;
+    &lt;p&gt;
+      &lt;span lang="de"&gt;Hallo Welt!&lt;/span&gt;
+    &lt;/p&gt;
+    &lt;p lang="ar" dir="rtl"&gt;مرحبا بالعالم&lt;/p&gt;
+
+    &lt;a href="https://example.fr/" hreflang="fr"&gt;Version française&lt;/a&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li><code>lang</code> declares the language of the content; put it on <code>&lt;html&gt;</code>.</li>
+      <li>Override with <code>lang</code> on any element that uses a different language.</li>
+      <li>Use BCP 47 language tags.</li>
+      <li><code>hreflang</code> on links declares the language of the linked resource.</li>
+      <li><code>dir="rtl"</code> handles right-to-left languages.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Set <code>lang="en"</code> on a document and add a French quotation.</li>
+      <li>Use <code>dir="rtl"</code> on an Arabic paragraph.</li>
+      <li>Add <code>hreflang</code> to a link pointing at another language version.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← IFrames</button>
+    <button class="nav-button" data-nav="next">Part Six →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     PART SIX DIVIDER
+     ============================================================ -->
+<section id="part-six" class="book-page cover-page part-page part-six">
+  <div class="cover-content">
+    <p class="part-number">Part Six</p>
+    <h1>Graphics and Metadata</h1>
+    <p class="part-desc">SVG, canvas, metadata, and marking up code and quotes — vector graphics, information about the page, and how to make text and code look right.</p>
+  </div>
+  <div class="book-nav">
+    <button class="nav-button" data-nav="next">Begin Chapter 31 →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 31 — SVG
+     ============================================================ -->
+<section id="ch-svg" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Six · Graphics and Metadata · Chapter 31</p>
+    <h2>SVG</h2>
+    <p class="chapter-tagline">Scalable Vector Graphics, written directly into HTML</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>SVG — Scalable Vector Graphics — defines vector graphics for the web. The <code>&lt;svg&gt;</code> element is a container for SVG graphics, which can be styled and manipulated with CSS and JavaScript when written inline. SVG paths, circles, rectangles, and text are all described by XML elements, and the graphics scale infinitely without loss of quality.</p>
+    <p>You can embed SVG three ways. <strong>Inline:</strong> paste the SVG markup directly into HTML — this lets you style it with CSS and script it with JavaScript. <strong>External with <code>&lt;img&gt;</code>:</strong> the simplest option, but the SVG cannot be styled or scripted. <strong>External with <code>&lt;object&gt;</code>:</strong> imports the SVG into the document, so it can be styled and scripted.</p>
+    <p>External SVGs can also be used as CSS <code>background-image</code> — either by URL or as an inline <code>data:</code> URL.</p>
+    <pre class="code-example"><code>&lt;svg viewBox="0 0 100 100" class="attention"&gt;
+  &lt;path d="M 50 5 L 95 95 L 5 95 Z" fill="red" /&gt;
+&lt;/svg&gt;
+
+&lt;img src="attention.svg" width="50" height="50" alt="Alert"&gt;
+
+&lt;object type="image/svg+xml" data="attention.svg"
+        width="50" height="50"&gt;&lt;/object&gt;
+
+&lt;div class="attention"&gt;&lt;/div&gt;
+&lt;style&gt;
+  .attention { background: url(attention.svg); }
+&lt;/style&gt;</code></pre>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>SVG is vector graphics: infinitely scalable, scriptable, styleable.</li>
+      <li>Inline SVG can be styled and scripted with CSS and JS.</li>
+      <li><code>&lt;img&gt;</code> embeds an SVG but cannot style or script it.</li>
+      <li><code>&lt;object&gt;</code> imports the SVG so it can be styled and scripted.</li>
+      <li>SVG can be used as a CSS background image.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Inline a simple SVG circle and change its fill with CSS.</li>
+      <li>Embed the same SVG with <code>&lt;img&gt;</code> and confirm you cannot change its colour.</li>
+      <li>Use an SVG as a CSS background image on a div.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Part Six</button>
+    <button class="nav-button" data-nav="next">Canvas →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 32 — CANVAS
+     ============================================================ -->
+<section id="ch-canvas" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Six · Graphics and Metadata · Chapter 32</p>
+    <h2>Canvas</h2>
+    <p class="chapter-tagline">Pixel-based drawing with JavaScript</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>The <code>&lt;canvas&gt;</code> element (new in HTML5) provides a drawing surface that JavaScript can use for shapes, graphs, image manipulation, and games. By default, a canvas is 300×150 CSS pixels. Unlike SVG, canvas graphics are raster: you cannot select, style, or inspect them after they are drawn — you can only re-draw them.</p>
+    <p>To draw, first get the canvas element's 2D drawing context with <code>canvas.getContext("2d")</code>. Then use its methods — <code>fillStyle</code>, <code>fillRect</code>, <code>strokeStyle</code>, <code>strokeRect</code>, <code>beginPath</code>, <code>arc</code>, <code>fill</code>, <code>fillText</code>, and so on. Each drawing operation paints on top of the previous ones; there is no automatic clearing.</p>
+    <pre class="code-example"><code>&lt;canvas id="myCanvas" width="300" height="150"&gt;
+  Your browser does not support canvas.
+&lt;/canvas&gt;
+
+&lt;script&gt;
+  var canvas = document.getElementById("myCanvas");
+  var ctx = canvas.getContext("2d");
+
+  ctx.fillStyle = "red";
+  ctx.fillRect(0, 0, 100, 100);
+
+  ctx.fillStyle = "green";
+  ctx.fillRect(25, 25, 50, 50);
+
+  ctx.fillStyle = "black";
+  ctx.fillText("Hello, canvas!", 24, 130);
+&lt;/script&gt;</code></pre>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li><code>&lt;canvas&gt;</code> is a raster drawing surface controlled by JavaScript.</li>
+      <li><code>getContext("2d")</code> returns the drawing context.</li>
+      <li>Canvas graphics cannot be styled or selected after drawing.</li>
+      <li>The default canvas size is 300×150 CSS pixels.</li>
+      <li>Always provide fallback content inside the tag.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Draw a red rectangle and a green rectangle inside it.</li>
+      <li>Write "Hello" with <code>fillText</code>.</li>
+      <li>Add a click event listener and draw a dot at the click position.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← SVG</button>
+    <button class="nav-button" data-nav="next">Meta Information →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 33 — META INFORMATION
+     ============================================================ -->
+<section id="ch-meta-information" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Six · Graphics and Metadata · Chapter 33</p>
+    <h2>Meta Information</h2>
+    <p class="chapter-tagline">The invisible head — SEO, social sharing, and device control</p>
+  </div>
+
+  <div class="chapter-story">
+    <p><code>&lt;meta&gt;</code> tags describe the document: author, description, keywords, generator, character encoding, viewport, robots, and social media metadata. <code>&lt;meta charset="UTF-8"&gt;</code> declares the character encoding and should be the very first meta tag. <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</code> makes pages render correctly on mobile devices.</p>
+    <p>The <code>description</code> meta tag becomes the snippet under your page title in search-engine results. The <code>robots</code> meta tag controls whether search engines may index a page and follow its links — values include <code>noindex</code>, <code>nofollow</code>, <code>none</code>, and <code>noarchive</code>. Use them sparingly; the default is to index and follow.</p>
+    <p>Open Graph (<code>og:*</code>) and Twitter Card (<code>twitter:*</code>) meta tags control how links to your page look when shared on social media — the card image, title, description, and type. These tags are widely used and affect CTR from social networks.</p>
+    <p>Two related redirect techniques — <code>&lt;meta http-equiv="refresh" content="5"&gt;</code> for a timed refresh and <code>&lt;meta http-equiv="refresh" content="5;url=..."&gt;</code> for a redirect — are discouraged because they hurt user experience. Use HTTP redirects and JavaScript instead.</p>
+    <pre class="code-example"><code>&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+&lt;meta name="description" content="Page description for search engines."&gt;
+&lt;meta name="author" content="Your Name"&gt;
+&lt;meta name="robots" content="noindex, nofollow"&gt;
+
+&lt;!-- Open Graph / Facebook --&gt;
+&lt;meta property="og:title" content="Content Title"&gt;
+&lt;meta property="og:image" content="https://example.com/image.jpg"&gt;
+&lt;meta property="og:description" content="Description Here"&gt;
+&lt;meta property="og:type" content="website"&gt;
+
+&lt;!-- Twitter --&gt;
+&lt;meta name="twitter:card" content="summary"&gt;
+&lt;meta name="twitter:title" content="Content Title"&gt;
+&lt;meta name="twitter:description" content="Description under 200 characters"&gt;
+&lt;meta name="twitter:image" content="https://example.com/image.jpg"&gt;</code></pre>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li><code>&lt;meta charset&gt;</code> declares character encoding; <code>UTF-8</code> is the standard.</li>
+      <li><code>&lt;meta name="viewport"&gt;</code> makes pages responsive on mobile.</li>
+      <li><code>description</code> becomes the search-engine snippet; <code>robots</code> controls indexing.</li>
+      <li>Open Graph and Twitter Card meta tags shape link previews on social media.</li>
+      <li>Avoid meta refresh redirects; use HTTP or JavaScript.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Add a description, author, and viewport meta tag to a page.</li>
+      <li>Add Open Graph tags and preview a link to your page in a social app.</li>
+      <li>Try <code>meta name="robots" content="noindex"</code> and verify it appears in the page source.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Canvas</button>
+    <button class="nav-button" data-nav="next">Marking up computer code →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 34 — MARKING UP COMPUTER CODE
+     ============================================================ -->
+<section id="ch-marking-up-computer-code" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Six · Graphics and Metadata · Chapter 34</p>
+    <h2>Marking up computer code</h2>
+    <p class="chapter-tagline">pre and code — for text that must keep its shape</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>When the formatting — whitespace, newlines, indentation — of a block of code matters, use <code>&lt;pre&gt;</code> together with <code>&lt;code&gt;</code>. The <code>&lt;pre&gt;</code> element preserves whitespace; the <code>&lt;code&gt;</code> element marks up code semantically. Inside the block you still have to escape the HTML-significant characters <code>&lt;</code>, <code>&gt;</code>, and <code>&amp;</code>.</p>
+    <p>For inline code — the name of an element, a property, or a short expression — just wrap it in <code>&lt;code&gt;</code> without <code>&lt;pre&gt;</code>. It renders in a monospace font by default, though you can change that with CSS.</p>
+    <pre class="code-example"><code>&lt;pre&gt;&lt;code&gt;
+x = 42
+if x == 42:
+    print("x is 42")
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;
+&amp;lt;p&amp;gt;This is a paragraph.&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The &lt;code&gt;a&lt;/code&gt; element creates a hyperlink.&lt;/p&gt;</code></pre>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li><code>&lt;pre&gt;</code> preserves whitespace; <code>&lt;code&gt;</code> marks code semantically.</li>
+      <li>Use <code>&lt;pre&gt;&lt;code&gt;</code> together for code blocks.</li>
+      <li>Escape <code>&lt;</code>, <code>&gt;</code>, and <code>&amp;</code> inside code blocks.</li>
+      <li>Use <code>&lt;code&gt;</code> alone for inline code.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Write a code block with Python-like indentation.</li>
+      <li>Show a fragment of HTML as text, with all angle brackets escaped.</li>
+      <li>Use inline <code>&lt;code&gt;</code> for an element name.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Meta Information</button>
+    <button class="nav-button" data-nav="next">Marking-up Quotes →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 35 — MARKING-UP QUOTES
+     ============================================================ -->
+<section id="ch-marking-up-quotes" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Six · Graphics and Metadata · Chapter 35</p>
+    <h2>Marking-up Quotes</h2>
+    <p class="chapter-tagline">q and blockquote — for quote marks the browser adds for you</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Use <code>&lt;q&gt;</code> for quotes that sit inside a sentence, and <code>&lt;blockquote&gt;</code> for quotes that occupy a whole block. In HTML5, you must not add quotation marks around <code>&lt;q&gt;</code> text — the browser inserts them. The same applies to <code>&lt;blockquote&gt;</code>: the browser may style it, but you should not add visual quotes yourself.</p>
+    <p>Both elements accept a <code>cite</code> attribute pointing at the source URL. Browsers typically do not display it, so if the source is relevant to readers, add a visible hyperlink. In HTML5, the citation may live inside the <code>&lt;blockquote&gt;</code> — but only inside a <code>&lt;cite&gt;</code> or <code>&lt;footer&gt;</code>.</p>
+    <pre class="code-example"><code>&lt;p&gt;She wrote &lt;q&gt;The answer is 42.&lt;/q&gt; and everyone agreed.&lt;/p&gt;
+
+&lt;blockquote cite="http://example.com/blog/hello-world"&gt;
+  &lt;p&gt;The answer is 42.&lt;/p&gt;
+  &lt;footer&gt;
+    &lt;cite&gt;
+      &lt;a href="http://example.com/blog/hello-world"&gt;Hello World&lt;/a&gt;
+    &lt;/cite&gt;
+  &lt;/footer&gt;
+&lt;/blockquote&gt;</code></pre>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li><code>&lt;q&gt;</code> is inline; <code>&lt;blockquote&gt;</code> is block-level.</li>
+      <li>Do not add quotation marks — the browser inserts them.</li>
+      <li><code>cite</code> on either element references the source URL.</li>
+      <li>Citations inside a blockquote must live in <code>&lt;cite&gt;</code> or <code>&lt;footer&gt;</code> (HTML5).</li>
+      <li>If the source matters, add a visible link too.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Write a sentence with an inline <code>&lt;q&gt;</code> and check that the quotes appear automatically.</li>
+      <li>Wrap a paragraph in <code>&lt;blockquote&gt;</code> and add a citation.</li>
+      <li>Add the <code>cite</code> attribute to both.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Marking up computer code</button>
+    <button class="nav-button" data-nav="next">Part Seven →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     PART SEVEN DIVIDER
+     ============================================================ -->
+<section id="part-seven" class="book-page cover-page part-page part-seven">
+  <div class="cover-content">
+    <p class="part-number">Part Seven</p>
+    <h1>Accessibility and Legacy</h1>
+    <p class="part-desc">Tabindex, global attributes, the HTML5 cache, event attributes, character entities, and ARIA — the last mile of professional HTML.</p>
+  </div>
+  <div class="book-nav">
+    <button class="nav-button" data-nav="next">Begin Chapter 36 →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 36 — TABINDEX
+     ============================================================ -->
+<section id="ch-tabindex" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Seven · Accessibility and Legacy · Chapter 36</p>
+    <h2>Tabindex</h2>
+    <p class="chapter-tagline">Control the order in which the Tab key visits elements</p>
+  </div>
+
+  <div class="chapter-story">
+    <p><code>tabindex</code> is a global attribute that makes an element focusable. With <code>tabindex="0"</code>, the element becomes focusable and joins the normal tab order at its document position. With <code>tabindex="-1"</code>, the element is focusable programmatically but skipped by Tab. Positive values override the natural order entirely — and are strongly discouraged.</p>
+    <p>Before adding <code>tabindex</code> to a non-interactive element, ask whether a native interactive element would be better: <code>&lt;button&gt;</code>, <code>&lt;a href&gt;</code>, <code>&lt;input&gt;</code>. Native elements are keyboard-accessible and screen-reader-friendly without extra work. Positive <code>tabindex</code> values disrupt the natural order and confuse screen reader users.</p>
+    <pre class="code-example"><code>&lt;div tabindex="0"&gt;Focusable div (avoid)&lt;/div&gt;
+
+&lt;button tabindex="-1"&gt;Focusable by JS, not by Tab&lt;/button&gt;
+
+&lt;!-- Better than tabindex="0" on a div --&gt;
+&lt;button&gt;Native button&lt;/button&gt;</code></pre>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li><code>tabindex="0"</code> makes an element focusable in document order.</li>
+      <li><code>tabindex="-1"</code> makes an element focusable only via JavaScript.</li>
+      <li>Positive <code>tabindex</code> values are not recommended.</li>
+      <li>Prefer native interactive elements over <code>tabindex</code> hacks.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Add <code>tabindex="0"</code> to a <code>&lt;div&gt;</code> and Tab to it.</li>
+      <li>Add <code>tabindex="-1"</code> to a button and use JS <code>.focus()</code> on it.</li>
+      <li>Replace a focusable div with a real <code>&lt;button&gt;</code>.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Part Seven</button>
+    <button class="nav-button" data-nav="next">Global Attributes →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 37 — GLOBAL ATTRIBUTES
+     ============================================================ -->
+<section id="ch-global-attributes" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Seven · Accessibility and Legacy · Chapter 37</p>
+    <h2>Global Attributes</h2>
+    <p class="chapter-tagline">The attributes every HTML element accepts</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Global attributes work on any HTML element. <code>class</code> names one or more classes; <code>id</code> names the element uniquely. <code>contenteditable</code> makes the content editable; <code>dir</code> sets text direction; <code>hidden</code> hides the element; <code>lang</code> declares the language; <code>style</code> applies inline CSS; <code>tabindex</code> controls focus; <code>title</code> adds a tooltip; <code>spellcheck</code> toggles spell-checking; <code>draggable</code> makes the element draggable; <code>translate</code> controls translation by user agents.</p>
+    <p><code>contenteditable</code> is inherited — children become editable unless they explicitly set <code>contenteditable="false"</code>. But an uneditable child inside an editable parent still inherits the text cursor, which can confuse users.</p>
+    <pre class="code-example"><code>&lt;p contenteditable&gt;
+  This is an editable paragraph.
+  &lt;span contenteditable="false"&gt;But this part is not editable.&lt;/span&gt;
+&lt;/p&gt;
+
+&lt;div class="card" id="card-1" title="Hover me"&gt;
+  Card content
+&lt;/div&gt;</code></pre>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Global attributes apply to every HTML element.</li>
+      <li><code>contenteditable</code> makes content editable in the browser.</li>
+      <li><code>hidden</code> hides an element without removing it from the DOM.</li>
+      <li><code>lang</code> and <code>dir</code> affect reading direction and pronunciation.</li>
+      <li><code>title</code> adds tooltip text; use it judiciously.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Add <code>contenteditable</code> to a paragraph and edit it.</li>
+      <li>Use <code>hidden</code> to hide an element and show it via JavaScript.</li>
+      <li>Add <code>title</code> to an image and hover it.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Tabindex</button>
+    <button class="nav-button" data-nav="next">HTML 5 Cache →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 38 — HTML 5 CACHE
+     ============================================================ -->
+<section id="ch-html5-cache" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Seven · Accessibility and Legacy · Chapter 38</p>
+    <h2>HTML 5 Cache</h2>
+    <p class="chapter-tagline">Offline access with an appcache manifest — a legacy technique</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>The HTML5 Application Cache (<code>appcache</code>) allowed a web app to specify which files should be cached for offline use. It worked by pointing <code>&lt;html manifest="index.appcache"&gt;</code> at a manifest file that listed resources under a <code>CACHE MANIFEST</code> header. Browsers then stored the files locally and served them when the network was unavailable.</p>
+    <p>AppCache was deprecated and removed from browsers in favour of Service Workers, which provide better control, better caching strategies, and no odd update behaviour. If you are reading this book to learn modern techniques, use a Service Worker instead. If you maintain legacy code that still uses AppCache, this is how it worked.</p>
+    <pre class="code-example"><code>&lt;!DOCTYPE html&gt;
+&lt;html manifest="index.appcache"&gt;
+  &lt;body&gt;
+    &lt;p&gt;Content&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+
+&lt;!-- index.appcache --&gt;
+CACHE MANIFEST
+index.html
+styles.css
+script.js</code></pre>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>AppCache declared offline-cacheable files via a manifest file.</li>
+      <li>The manifest was referenced with the <code>manifest</code> attribute on <code>&lt;html&gt;</code>.</li>
+      <li>AppCache is deprecated and removed from browsers.</li>
+      <li>Service Workers are the modern replacement.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Read the deprecation notice for AppCache in your browser's documentation.</li>
+      <li>Write a minimal Service Worker that caches the current page.</li>
+      <li>Load the page offline and confirm the Service Worker serves it.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Global Attributes</button>
+    <button class="nav-button" data-nav="next">HTML Event Attributes →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 39 — HTML EVENT ATTRIBUTES
+     ============================================================ -->
+<section id="ch-html-event-attributes" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Seven · Accessibility and Legacy · Chapter 39</p>
+    <h2>HTML Event Attributes</h2>
+    <p class="chapter-tagline">Inline handlers — convenient, tempting, and mostly not recommended</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>HTML event attributes run JavaScript in response to user actions: <code>onclick</code>, <code>oninput</code>, <code>onsubmit</code>, <code>onkeydown</code>, and dozens more. They are easy to write and hard to maintain. Inline handlers mix markup with behaviour, are hard to test, and cannot be reused or removed as easily as listeners added via <code>addEventListener</code>.</p>
+    <p>Form events (<code>onblur</code>, <code>onchange</code>, <code>onfocus</code>, <code>oninput</code>, <code>oninvalid</code>, <code>onreset</code>, <code>onsearch</code>, <code>onselect</code>, <code>onsubmit</code>) fire as the user interacts with form controls. Keyboard events (<code>onkeydown</code>, <code>onkeypress</code>, <code>onkeyup</code>) fire when keys are pressed and released. <code>onclick</code> fires on click; <code>onload</code> fires when the page or an image has loaded.</p>
+    <p>For modern code, prefer <code>addEventListener</code> — it separates concerns, works with any number of listeners, and does not pollute the global scope with function names.</p>
+    <pre class="code-example"><code>&lt;!-- Inline handler (works, but discouraged) --&gt;
+&lt;button onclick="alert('Hello!')"&gt;Say Hello&lt;/button&gt;
+
+&lt;!-- Better: attach a listener --&gt;
+&lt;button id="greet"&gt;Say Hello&lt;/button&gt;
+&lt;script&gt;
+  document.getElementById("greet").addEventListener("click", function () {
+    alert("Hello!");
+  });
+&lt;/script&gt;
+
+&lt;!-- Form event example --&gt;
+&lt;form onsubmit="return validateForm()"&gt;
+  &lt;input type="text" name="name" required&gt;
+  &lt;input type="submit"&gt;
+&lt;/form&gt;</code></pre>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Event attributes run JavaScript in response to user actions.</li>
+      <li>Common events: <code>click</code>, <code>input</code>, <code>change</code>, <code>submit</code>, <code>keydown</code>.</li>
+      <li>Inline handlers mix markup with behaviour and are hard to maintain.</li>
+      <li>Prefer <code>addEventListener</code> in modern code.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Attach a click handler to a button inline.</li>
+      <li>Attach the same handler with <code>addEventListener</code>.</li>
+      <li>Add a <code>submit</code> handler that logs the form values.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← HTML 5 Cache</button>
+    <button class="nav-button" data-nav="next">Character Entities →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 40 — CHARACTER ENTITIES
+     ============================================================ -->
+<section id="ch-character-entities" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Seven · Accessibility and Legacy · Chapter 40</p>
+    <h2>Character Entities</h2>
+    <p class="chapter-tagline">Writing symbols that would otherwise break the markup</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Some characters are reserved in HTML and cannot be written literally — most importantly <code>&lt;</code>, <code>&gt;</code>, and <code>&amp;</code>. Some characters are not available on a standard keyboard, or are easily confused with other characters. Character entities solve both problems: an entity begins with <code>&amp;</code>, ends with <code>;</code>, and is either a named entity (<code>&amp;copy;</code>) or a numeric one (<code>&amp;#169;</code>).</p>
+    <p>The most important entities are <code>&amp;lt;</code> for <code>&lt;</code>, <code>&amp;gt;</code> for <code>&gt;</code>, <code>&amp;amp;</code> for <code>&amp;</code>, <code>&amp;nbsp;</code> for a non-breaking space, and <code>&amp;quot;</code> for a double quote. A full list is maintained by the W3C.</p>
+    <p>Use numeric entities when the character you want has no memorable name, and named entities when they exist — they are more readable. Non-breaking spaces are the exception: they are invisible and can hurt layout if used carelessly.</p>
+    <pre class="code-example"><code>&lt;p&gt;5 &amp;lt; 10 &amp;amp;&amp;amp; 10 &amp;gt; 5&lt;/p&gt;
+&lt;p&gt;&amp;copy; 2024 Stack Exchange Inc.&lt;/p&gt;
+&lt;p&gt;100&amp;nbsp;km&lt;/p&gt;
+&lt;p&gt;A non-breaking space between 100 and km keeps them on one line.&lt;/p&gt;
+
+&lt;input type="text" placeholder="&amp;#128269; Search"&gt;</code></pre>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Character entities start with <code>&amp;</code> and end with <code>;</code>.</li>
+      <li>Named entities (<code>&amp;copy;</code>) and numeric entities (<code>&amp;#169;</code>) both work.</li>
+      <li>Escape <code>&lt;</code>, <code>&gt;</code>, and <code>&amp;</code> to avoid breaking markup.</li>
+      <li><code>&amp;nbsp;</code> is a non-breaking space.</li>
+      <li>Prefer named entities — they are more readable.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Display the text <code>&lt;p&gt;</code> literally using entities.</li>
+      <li>Show the copyright symbol with <code>&amp;copy;</code>.</li>
+      <li>Use <code>&amp;nbsp;</code> to keep a number and a unit on one line.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← HTML Event Attributes</button>
+    <button class="nav-button" data-nav="next">ARIA →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 41 — ARIA
+     ============================================================ -->
+<section id="ch-aria" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Seven · Accessibility and Legacy · Chapter 41</p>
+    <h2>ARIA</h2>
+    <p class="chapter-tagline">Roles and attributes that describe intent to assistive technology</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>ARIA — Accessible Rich Internet Applications — is a set of roles and attributes that describe the purpose and state of UI elements to assistive technologies. The <code>role</code> attribute assigns a role; <code>aria-*</code> attributes describe states and relationships. ARIA is essential for custom widgets (sliders, tabs, custom menus) that have no native HTML equivalent — and unnecessary on elements that already have semantic HTML.</p>
+    <p>Never add a role that contradicts the element's native semantics. <code>&lt;button role="button"&gt;</code> is redundant; <code>&lt;div role="button"&gt;</code> is a common workaround but requires extra JavaScript for keyboard handling. Prefer semantic HTML wherever possible.</p>
+    <p>Some of the most useful roles: <code>alert</code> (urgent, live status message), <code>alertdialog</code>, <code>application</code>, <code>article</code>, <code>banner</code>, <code>button</code>, <code>checkbox</code>, <code>dialog</code>, <code>form</code>, <code>grid</code>, <code>group</code>, <code>heading</code>, <code>img</code>, <code>link</code>, <code>list</code>, <code>listbox</code>, <code>listitem</code>, <code>main</code>, <code>menu</code>, <code>menubar</code>, <code>menuitem</code>, <code>navigation</code>, <code>progressbar</code>, <code>radio</code>, <code>region</code>, <code>search</code>, <code>slider</code>, <code>status</code>, <code>tab</code>, <code>tablist</code>, <code>textbox</code>, <code>timer</code>, <code>toolbar</code>, <code>tooltip</code>, <code>tree</code>, <code>treeitem</code>. Live regions (<code>aria-live</code>, <code>aria-atomic</code>, <code>aria-busy</code>) announce dynamic changes to screen-reader users.</p>
+    <pre class="code-example"><code>&lt;div role="alert" aria-live="assertive"&gt;
+  Your session will expire in 60 seconds.
+&lt;/div&gt;
+
+&lt;div role="alertdialog"&gt;
+  &lt;h1&gt;Warning&lt;/h1&gt;
+  &lt;div role="alert"&gt;Your session will expire.&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div role="group"&gt;
+  &lt;button role="button"&gt;Previous&lt;/button&gt;
+  &lt;button role="button"&gt;Next&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;ul role="list"&gt;
+  &lt;li role="listitem"&gt;One&lt;/li&gt;
+  &lt;li role="listitem"&gt;Two&lt;/li&gt;
+  &lt;li role="listitem"&gt;Three&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>ARIA describes roles and states to assistive technology.</li>
+      <li>Use it for custom widgets that have no native HTML equivalent.</li>
+      <li>Do not duplicate native semantics with redundant roles.</li>
+      <li>Live regions (<code>aria-live</code>) announce dynamic content changes.</li>
+      <li>Prefer semantic HTML; ARIA is a supplement, not a replacement.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Add <code>role="alert"</code> to a notification element and trigger it.</li>
+      <li>Inspect a custom slider with a screen reader and observe its ARIA role.</li>
+      <li>Replace a <code>&lt;div role="button"&gt;</code> with a real <code>&lt;button&gt;</code>.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Character Entities</button>
+    <button class="nav-button" data-nav="next">Glossary →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     GLOSSARY
+     ============================================================ -->
+<section id="glossary" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Appendix</p>
+    <h2>Glossary of Useful Terms</h2>
+    <p class="chapter-tagline">The vocabulary of professional HTML5</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Terms</h3>
+    <dl class="glossary-list">
+      <dt>Alt text</dt>
+      <dd>Alternative text for an image, used by screen readers and search engines and shown when the image fails to load.</dd>
+
+      <dt>ARIA</dt>
+      <dd>Accessible Rich Internet Applications — attributes and roles that describe UI elements to assistive technology.</dd>
+
+      <dt>Attribute</dt>
+      <dd>A name/value pair attached to an element's opening tag that configures the element.</dd>
+
+      <dt>Block-level element</dt>
+      <dd>An element that occupies the full width available and starts a new line in the visual layout.</dd>
+
+      <dt>Character entity</dt>
+      <dd>A text sequence such as <code>&amp;lt;</code> that represents a single character in HTML.</dd>
+
+      <dt>Class</dt>
+      <dd>A non-unique attribute that names one or more classes for styling and scripting.</dd>
+
+      <dt>Data attribute</dt>
+      <dd>A <code>data-*</code> attribute that stores custom data on an element, readable via <code>dataset</code>.</dd>
+
+      <dt>Doctype</dt>
+      <dd>The <code>&lt;!DOCTYPE html&gt;</code> declaration that must come first in an HTML document.</dd>
+
+      <dt>DOM</dt>
+      <dd>The Document Object Model — the in-memory tree of elements that JavaScript interacts with.</dd>
+
+      <dt>Element</dt>
+      <dd>An HTML construct consisting of a start tag, optional content, and an end tag (or a single void tag).</dd>
+
+      <dt>Form-associated element</dt>
+      <dd>An element that can belong to a <code>&lt;form&gt;</code>, such as <code>input</code> or <code>output</code>.</dd>
+
+      <dt>Global attribute</dt>
+      <dd>An attribute that applies to any HTML element, such as <code>class</code>, <code>id</code>, <code>lang</code>, or <code>hidden</code>.</dd>
+
+      <dt>ID</dt>
+      <dd>A unique identifier for one element in a document, targetable by CSS, JavaScript, and anchor links.</dd>
+
+      <dt>Inline element</dt>
+      <dd>An element that occupies only as much width as its content requires and does not start a new line.</dd>
+
+      <dt>MIME type</dt>
+      <dd>A string such as <code>video/mp4</code> or <code>text/css</code> declaring the media type of a resource.</dd>
+
+      <dt>Open Graph</dt>
+      <dd>A metadata vocabulary (the <code>og:*</code> tags) that describes how a page appears when shared on social media.</dd>
+
+      <dt>Polyfill</dt>
+      <dd>JavaScript that adds modern features to older browsers that lack native support.</dd>
+
+      <dt>Screen reader</dt>
+      <dd>Assistive software that reads on-screen content aloud, using semantics and ARIA for structure.</dd>
+
+      <dt>Semantic HTML</dt>
+      <dd>Using elements whose names describe their purpose, rather than generic containers like <code>&lt;div&gt;</code>.</dd>
+
+      <dt>Shadow DOM</dt>
+      <dd>A scoped subtree of DOM nodes that isolates styles and markup — the basis of Web Components.</dd>
+
+      <dt>SVG</dt>
+      <dd>Scalable Vector Graphics — an XML format for describing vector images, embeddable in HTML.</dd>
+
+      <dt>Tab order</dt>
+      <dd>The order in which elements receive focus when the Tab key is pressed.</dd>
+
+      <dt>Tag</dt>
+      <dd>The syntactic unit of an element — <code>&lt;p&gt;</code> is a start tag, <code>&lt;/p&gt;</code> is an end tag.</dd>
+
+      <dt>UTF-8</dt>
+      <dd>A variable-width character encoding that covers the whole Unicode range — the standard for web pages.</dd>
+
+      <dt>Void element</dt>
+      <dd>An element that has no content and no closing tag, such as <code>&lt;img&gt;</code>, <code>&lt;br&gt;</code>, or <code>&lt;input&gt;</code>.</dd>
+
+      <dt>W3C</dt>
+      <dd>The World Wide Web Consortium — one of the standards bodies behind HTML and related specs.</dd>
+
+      <dt>Web Component</dt>
+      <dd>A reusable custom element built from Custom Elements, Shadow DOM, and HTML Templates.</dd>
+
+      <dt>WHATWG</dt>
+      <dd>The Web Hypertext Application Technology Working Group, which maintains the HTML Living Standard.</dd>
+    </dl>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← ARIA</button>
+    <button class="nav-button" data-nav="next">Back Cover →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     BACK COVER
+     ============================================================ -->
+<section id="back" class="book-page cover-page back-cover">
+  <div class="cover-content">
+    <h2>The End… Or Just the Beginning?</h2>
+    <p>You have walked through forty-one chapters of HTML5 — from the very first doctype to the subtleties of ARIA, from tables and forms to SVG, canvas, and Open Graph.</p>
+    <p>But the web keeps changing. The best way to learn HTML is to <b>keep building</b>. Start a page. Break it. Fix it. Try again.</p>
+    <p class="closing-line">Happy coding!</p>
+    <p class="cover-note">Refactored from <em>HTML5 Notes for Professionals</em> by Stack Overflow Documentation, with gratitude for the thousands of contributors who wrote down what they learned. All mistakes in the retelling are the adapter's own.</p>
+    <p class="cover-credit">
+      Refactored &amp; illustrated by<br>
+      <a href="https://agunechemba.name.ng" target="_blank" rel="noopener">Agunechemba Ekene</a>
+    </p>
+  </div>
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Glossary</button>
+    <button class="nav-button" data-nav="first">↺ Begin Again</button>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
